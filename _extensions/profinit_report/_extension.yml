@@ -1,0 +1,16 @@
+title: Profinit_report
+author: First Last
+version: 1.0.0
+quarto-required: ">=1.2.0"
+contributes:
+  formats:
+    html:
+      toc: true
+      embed-resources: true
+      smooth-scroll: true
+      title-block-banner: "#616365"
+      theme: [default,custom.scss]
+      css: logo.css
+      
+
+      

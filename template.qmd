@@ -1,0 +1,114 @@
+---
+title: "Report template"
+subtitle: "with a subtitle"
+author: "Name and Surname"
+format:
+  profinit_report-html: default
+
+date: last-modified
+date-format: "DD-MM-YYYY"
+
+---
+
+<!-- <style> -->
+
+
+<!-- .quarto-title-block .quarto-title-banner { -->
+<!--   background-image: url(_extensions/profinit_report/logo.png);  -->
+<!--   background-size: 200px; -->
+<!--   background-repeat: no-repeat; -->
+<!--   background-origin: content-box;  -->
+<!--   background-position: 90% 50% -->
+<!-- } -->
+
+<!-- </style> -->
+
+
+
+## Introduction
+
+Documentation to Quarto can be found on <https://quarto.org>.
+
+## R
+
+```{r}
+#| warning: false
+#| echo: false
+
+print(Sys.time())
+```
+
+A piece of code in R:
+
+```{r}
+#| label: time_series
+#| warning: false
+#| echo: false
+
+library(ggplot2)
+library(dplyr)
+
+set.seed(0)
+
+# Dummy data - random walk
+days_count = 365
+data <- data.frame(
+  day = as.Date("2023-01-01") + (1:days_count) - 1,
+  value1 = cumsum(rnorm(days_count, 0, 1)),
+  value2 = cumsum(rnorm(days_count, 0, 2)),
+  value3 = cumsum(rnorm(days_count, 0, 3))
+)
+
+
+
+# Most basic bubble plot
+ggplot(data, aes(x=day)) +
+  geom_line(aes(y = value1), color = "darkred") + 
+  geom_line(aes(y = value2), color="steelblue") + 
+  geom_line(aes(y = value3), color="darkgreen") +
+  labs(
+    title = "Random walks trough a year",
+    subtitle = "2023",
+    caption = "Random walks in 2023",
+    tag = "Figure 1",
+    x = "Time",
+    y = "Value",
+  )+
+  theme_classic()
+
+```
+
+## Python
+
+A piece of code using Python:
+
+```{python}
+
+#| warning: false
+
+#| echo: false
+
+import numpy as np
+
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+
+theta = 2 * np.pi * r
+
+fig, ax = plt.subplots(
+
+  subplot_kw = {'projection': 'polar'}
+
+)
+
+ax.plot(theta, r)
+
+ax.set_rticks([0.5, 1, 1.5, 2])
+
+ax.grid(True)
+
+plt.show()
+
+```
+
