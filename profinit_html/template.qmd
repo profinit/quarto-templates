@@ -3,26 +3,12 @@ title: "Report template"
 subtitle: "with a subtitle"
 author: "Name and Surname"
 format:
-  profinit_report-html: default
+  profinit_html-html: default
 
 date: last-modified
 date-format: "DD-MM-YYYY"
 
 ---
-
-<!-- <style> -->
-
-
-<!-- .quarto-title-block .quarto-title-banner { -->
-<!--   background-image: url(_extensions/profinit_report/logo.png);  -->
-<!--   background-size: 200px; -->
-<!--   background-repeat: no-repeat; -->
-<!--   background-origin: content-box;  -->
-<!--   background-position: 90% 50% -->
-<!-- } -->
-
-<!-- </style> -->
-
 
 
 ## Introduction
@@ -31,14 +17,15 @@ Documentation to Quarto can be found on <https://quarto.org>.
 
 ## R
 
+A piece of code in R:
+
 ```{r}
-#| warning: false
-#| echo: false
 
 print(Sys.time())
+
 ```
 
-A piece of code in R:
+Adding "#| echo: false" will remove the input code.
 
 ```{r}
 #| label: time_series
