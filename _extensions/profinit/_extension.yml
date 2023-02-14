@@ -11,6 +11,7 @@ contributes:
       title-block-banner: "#616365"
       theme: [default,custom.scss]
       css: logo.css
-      
-
-      
+    pdf:
+      toc: true
+      include-in-header: header.tex
+      include-before-body: logo.tex

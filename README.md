@@ -1,4 +1,15 @@
-# <%= title %> Format
+# <%= Profiniti sablona pro Quarto %> Format
+
+
+Sablony existuji pro, v zavorce je vzorovz soubor 
+
+html (template_html)
+pdf (template_pdf)
+
+Known issues:
+logo.pdf nefunguje s html zpravou
+
+Dal zatim nevim.
 
 ## Installing
 

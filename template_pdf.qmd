@@ -1,7 +1,7 @@
 ---
 title: Profinit report
 format:
-  profinit_pdf-pdf: default
+  profinit-pdf: default
 author: Name Surname
 date: last-modified
 date-format: "DD. M. YYYY"

@@ -3,7 +3,7 @@ title: "Report template"
 subtitle: "with a subtitle"
 author: "Name and Surname"
 format:
-  profinit_html-html: default
+  profinit-html: default
 
 date: last-modified
 date-format: "DD-MM-YYYY"
