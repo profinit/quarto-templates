@@ -3,3 +3,10 @@ profinit_html
 profinit_pdf
 template_html.html
 template_pdf.pdf
+template.html
+template.pdf
+template_with_code.html
+template_with_code.pdf
+template_files
+template_revealjs.html
+template_revealjs_files

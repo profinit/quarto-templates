@@ -1,12 +1,11 @@
-# <%= Profiniti sablona pro Quarto %> Format
+# Profiniti sablona pro Quarto
 
+Sablona "template.qmd" je minimalisticka verze spustitelna verze sablony.
 
-Sablony existuji pro, v zavorce je vzorovz soubor 
+Pro priklad s kodem slouzi "template_with_code.qmd"
 
-html (template_html)
-pdf (template_pdf)
+## Known issues:
 
-Known issues:
 logo.pdf nefunguje s html zpravou
 
 Dal zatim nevim.
@@ -15,7 +14,7 @@ Dal zatim nevim.
 
 *TODO*: Replace the `<github-organization>` with your GitHub organization.
 
-```bash
+``` bash
 quarto use template <github-organization>/<%= filesafename %>
 ```
 
@@ -28,7 +27,3 @@ This will install the extension and create an example qmd file that you can use 
 ## Format Options
 
 *TODO*: If your format has options that can be set via document metadata, describe them.
-
-## Example
-
-Here is the source code for a minimal sample document: [example.qmd](example.qmd).

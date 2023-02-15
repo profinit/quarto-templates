@@ -1,13 +1,11 @@
-title: Profinit_report
-author: First Last
 version: 1.0.0
 quarto-required: ">=1.2.0"
 contributes:
   formats:
     html:
-      toc: true
-      embed-resources: true
-      smooth-scroll: true
+      #embed-resources: true
+      #smooth-scroll: true
+      #toc: true
       title-block-banner: "#616365"
       theme: [default,custom.scss]
       css: logo.css
@@ -15,3 +13,6 @@ contributes:
       toc: true
       include-in-header: header.tex
       include-before-body: logo.tex
+    revealjs:
+      theme: [dark, custom.scss]
+      logo: logo.svg

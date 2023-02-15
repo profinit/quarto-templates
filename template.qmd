@@ -1,0 +1,25 @@
+---
+title: Profinit report
+format:
+  profinit-html: default  # generuje html v pripade potreby lze smazat/zakomentovat a odkomentovat pdf
+  #profinit-pdf: default
+author: Name Surname
+date: last-modified
+date-format: "DD. M. YYYY"
+---
+
+
+
+
+## Introduction
+
+Documentation to Quarto can be found on <https://quarto.org>.
+
+## Main part
+
+Something important.
+
+## Conclusion
+
+You can learn more about controlling the appearance of PDF output here: <https://quarto.org/docs/output-formats/pdf-basics.html>
+

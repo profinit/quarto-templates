@@ -1,14 +1,18 @@
 ---
-title: "Report template"
-subtitle: "with a subtitle"
-author: "Name and Surname"
+title: Profinit report
 format:
-  profinit-html: default
-
+  profinit-html: default  # generuje html v pripade potreby lze smazat/zakomentovat a odkomentovat pdf
+  html:
+    embed-resources: true
+    smooth-scroll: true
+    toc: true
+  #profinit-pdf: default
+author: Name Surname
 date: last-modified
-date-format: "DD-MM-YYYY"
-
+date-format: "DD. M. YYYY"
 ---
+
+
 
 
 ## Introduction
@@ -98,4 +102,8 @@ ax.grid(True)
 plt.show()
 
 ```
+
+
+
+You can learn more about controlling the appearance of PDF output here: <https://quarto.org/docs/output-formats/pdf-basics.html>
 
