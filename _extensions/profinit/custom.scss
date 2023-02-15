@@ -10,13 +10,15 @@ $primary:       $profinit_red !default;
 
 /*-- scss:rules --*/
 
-h2, h3, h4 {
+h1.title {
+  color: $profinit_grey;  
+}
+
+h1:not(.title), h2, h3, h4 {
   color: $profinit_red;  
 }
 
-title {
-  color: black;  
-}
+
 
 h4 em {
   color: black;    

@@ -2,14 +2,14 @@
 title: Profinit report
 format:
   profinit-html: default  # generuje html v pripade potreby lze smazat/zakomentovat a odkomentovat pdf
-  html:
-    embed-resources: true
-    smooth-scroll: true
-    toc: true
   #profinit-pdf: default
 author: Name Surname
 date: last-modified
 date-format: "DD. M. YYYY"
+
+embed-resources: true
+smooth-scroll: true
+toc: true
 ---
 
 

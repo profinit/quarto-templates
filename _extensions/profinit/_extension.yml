@@ -3,16 +3,12 @@ quarto-required: ">=1.2.0"
 contributes:
   formats:
     html:
-      #embed-resources: true
-      #smooth-scroll: true
-      #toc: true
-      title-block-banner: "#616365"
+      title-block-banner: white # "#616365"
       theme: [default,custom.scss]
       css: logo.css
     pdf:
-      toc: true
       include-in-header: header.tex
       include-before-body: logo.tex
     revealjs:
-      theme: [dark, custom.scss]
+      theme: [default, custom.scss]
       logo: logo.svg

@@ -7,6 +7,9 @@ template.html
 template.pdf
 template_with_code.html
 template_with_code.pdf
+template_with_code.qmd
+template_with_code_files
 template_files
 template_revealjs.html
 template_revealjs_files
+template_revealjs.qmd

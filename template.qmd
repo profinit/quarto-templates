@@ -1,11 +1,18 @@
 ---
-title: Profinit report
-format:
-  profinit-html: default  # generuje html v pripade potreby lze smazat/zakomentovat a odkomentovat pdf
-  #profinit-pdf: default
+title: Profinit report 
 author: Name Surname
 date: last-modified
 date-format: "DD. M. YYYY"
+  
+format:
+  profinit-html: default  # generuje html v pripade potreby lze smazat/zakomentovat a odkomentovat pdf
+  #profinit-pdf: default
+  #profinit-revealjs: default
+
+# embed-resources: true
+# smooth-scroll: true
+# toc: true
+
 ---
 
 

@@ -4,9 +4,10 @@ Sablona "template.qmd" je minimalisticka verze spustitelna verze sablony.
 
 Pro priklad s kodem slouzi "template_with_code.qmd"
 
+Sablona pro revealjs je "template_revealjs.qmd"
+
 ## Known issues:
 
-logo.pdf nefunguje s html zpravou
 
 Dal zatim nevim.
 
