@@ -1,30 +1,31 @@
 # Profiniti sablona pro Quarto
 
-Sablona "template.qmd" je minimalisticka verze spustitelna verze sablony.
+Rozsireni pro quarto, ktere pridava logo a nastavuje profiniti barvy do quarto dokumentu.
 
-Pro priklad s kodem slouzi "template_with_code.qmd"
+## Instalace
 
-Sablona pro revealjs je "template_revealjs.qmd"
+Je potreba mit v adresari se souborem `\*.qmd` adresar `\_extensions`.
 
-## Known issues:
+To lze bud rucne nebo po stazeni zip souboru s repozitarem (quarto-templates-master.zip) prikazem
 
+`quarto install extension .\quarto-templates-master.zip`
 
-Dal zatim nevim.
+*TODO*: Nahrat nekam, kde k tomu bude volne pristup bez nutnosti byt prihlasen v datascience gitlabu.
 
-## Installing
+## Pouziti
 
-*TODO*: Replace the `<github-organization>` with your GitHub organization.
+K renderovani dokumentu slouzi prikaz (`template.qmd` nahradit samozrejme vlastnim souborem)
 
-``` bash
-quarto use template <github-organization>/<%= filesafename %>
-```
+`quarto render template.qmd --to profinit-html`
 
-This will install the extension and create an example qmd file that you can use as a starting place for your article.
+pripadne `-- to profinit-pdf` nebo `--to profinit-revealjs`
 
-## Using
+Prikaz
 
-*TODO*: Describe how to use your format.
+`quarto render template.qmd`
 
-## Format Options
+(tedy bez specifikace formatu) vygeneruje vsechny formaty uvedene v `\*.qmd`, s tím, že pokud se formaty generuji do stejneho vystupniho formatu (profinit-html a profinit-revealjs se oba generuji do html), vzgeneruje se jen prvni z nich.
 
-*TODO*: If your format has options that can be set via document metadata, describe them.
+## Prikady pouziti
+
+Sablona `template.qmd` je minimalisticka verze spustitelna verze sablony.
