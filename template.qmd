@@ -13,6 +13,9 @@ format:
 # smooth-scroll: true
 # toc: true
 
+bibliography: _extensions/profinit/references.bib
+csl: _extensions/profinit/iso690-numeric-brackets-cs.csl
+
 ---
 
 
@@ -24,7 +27,7 @@ Documentation to Quarto can be found on <https://quarto.org>.
 
 ## Main part
 
-Something important.
+Something important. As in @Andel05 .
 
 ## Conclusion
 
