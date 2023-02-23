@@ -1,9 +1,9 @@
 ---
-title: Ukázka reportu
-subtitle: s demonstrací funkcionalit
+title: Quarto šablona Profinitu
 author: Jan Novák
 date: last-modified
 lang: cs
+bibliography: references.bib
   
 format:
   profinit-html:
@@ -17,41 +17,30 @@ format:
 ---
 
 
-# Úvod
+## Úvod
 
-Tento report slouží jako příklad a demonstrace základní funkcionality.
+Quarto nám umožňuje spojit obsah a kód do jednoho dokumentu. Více o Quarto lze nalézt zde <https://quarto.org/>.
 
-# Kód
+## Kód
 
-```{.python}
-import sys
-print(sys.path)
+```{python}
+1 + 1
 ```
 
-# Obrázky
+## Obrázky
 
 ![Příklad obrázku](https://amazinganimalphotos.com/wp-content/uploads/2014/11/artist-animals-funny-memes.jpg)
 
-# Tabset
+## Tabulky
 
+| Default | Left | Right | Center |
+|---------|:-----|------:|:------:|
+| 12      | 12   |    12 |   12   |
+| 123     | 123  |   123 |  123   |
+| 1       | 1    |     1 |   1    |
 
-::: {.panel-tabset}
-
-## Tab 1
-
-Obsah.
-
-## Tab 2
-
-Obsah.
-
-:::
 
 ## Citace
 
 Citace jsou defaultně nastaveny na numerické. Lze je dělat takto [@gitignore].
-
-## Kam dále
-
-Velmi doporučujeme navštívit dokumentaci Quarto: [oficiální web quarto](https://quarto.org/).
 
