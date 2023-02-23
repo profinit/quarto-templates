@@ -1,31 +1,50 @@
-# Profiniti sablona pro Quarto
+# Quarto Templates
 
-Rozsireni pro quarto, ktere pridava logo a nastavuje profiniti barvy do quarto dokumentu.
+Tento projekt je implementace Profinitích šablon pro quarto. V Quarto dokumentech:
 
-## Instalace
+- Přidává logo,
+- nastavuje barvy,
+- a mnoho dalších věcí!
 
-Je potreba mit v adresari se souborem `\*.qmd` adresar `\_extensions`.
 
-To lze bud rucne nebo po stazeni zip souboru s repozitarem (quarto-templates-master.zip) prikazem
+## Přidání do projektu
 
-`quarto install extension .\quarto-templates-master.zip`
+Instaluje se do adresáře, ve kterém se nachází soubor s příponou `.qmd`.
 
-*TODO*: Nahrat nekam, kde k tomu bude volne pristup bez nutnosti byt prihlasen v datascience gitlabu.
+```bash
+quarto add ./quarto-templates-master.zip
+```
 
-## Pouziti
+**TODO: Nahrat nekam, kde k tomu bude volne pristup bez nutnosti byt prihlasen v datascience gitlabu.**
+
+## Použití
+
+Šablona podporuje následující formáty: html, pdf a revealjs (html prezentace). Abychom je využili:
+
+```bash
+quarto render file.qmd --to profinit-html
+```
 
 K renderovani dokumentu slouzi prikaz (`template.qmd` nahradit samozrejme vlastnim souborem)
 
-`quarto render template.qmd --to profinit-html`
+### Html
 
-pripadne `-- to profinit-pdf` nebo `--to profinit-revealjs`
+```bash
+quarto render template.qmd --to profinit-html
+```
 
-Prikaz
+### Pdf
 
-`quarto render template.qmd`
+```bash
+quarto render template.qmd --to profinit-pdf
+```
 
-(tedy bez specifikace formatu) vygeneruje vsechny formaty uvedene v `\*.qmd`, s tím, že pokud se formaty generuji do stejneho vystupniho formatu (profinit-html a profinit-revealjs se oba generuji do html), vzgeneruje se jen prvni z nich.
+### Revealjs
 
-## Prikady pouziti
+```bash
+quarto render template.qmd --to profinit-revealjs
+```
 
-Sablona `template.qmd` je minimalisticka verze spustitelna verze sablony.
+## Příklad
+
+Šablona `template.qmd` slouží jako příklad, který lze spustit.

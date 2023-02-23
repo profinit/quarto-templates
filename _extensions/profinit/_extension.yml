@@ -6,9 +6,12 @@ contributes:
       title-block-banner: white # "#616365"
       theme: [default,custom.scss]
       css: logo.css
+      csl: iso690-numeric-brackets-cs.csl
     pdf:
       include-in-header: header.tex
       include-before-body: logo.tex
+      csl: iso690-numeric-brackets-cs.csl
     revealjs:
       theme: [default, custom.scss]
       logo: logo.svg
+      csl: iso690-numeric-brackets-cs.csl
