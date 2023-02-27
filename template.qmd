@@ -1,0 +1,46 @@
+---
+title: Quarto šablona Profinitu
+author: Jan Novák
+date: last-modified
+lang: cs
+bibliography: references.bib
+  
+format:
+  profinit-html:
+    toc: true
+    embed-resources: true
+  profinit-pdf:
+    toc: true
+  profinit-revealjs:
+    incremental: true
+    embed-resources: true
+---
+
+
+## Úvod
+
+Quarto nám umožňuje spojit obsah a kód do jednoho dokumentu. Více o Quarto lze nalézt zde <https://quarto.org/>.
+
+## Kód
+
+```{python}
+1 + 1
+```
+
+## Obrázky
+
+![Příklad obrázku](https://amazinganimalphotos.com/wp-content/uploads/2014/11/artist-animals-funny-memes.jpg)
+
+## Tabulky
+
+| Default | Left | Right | Center |
+|---------|:-----|------:|:------:|
+| 12      | 12   |    12 |   12   |
+| 123     | 123  |   123 |  123   |
+| 1       | 1    |     1 |   1    |
+
+
+## Citace
+
+Citace jsou defaultně nastaveny na numerické. Lze je dělat takto [@gitignore].
+
