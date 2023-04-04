@@ -8,7 +8,11 @@ bibliography: references.bib
 format:
   profinit-html:
     toc: true
+    toc-location: left
+    df-print: kable
+    page-layout: full
     embed-resources: true
+    anchor-sections: true
   profinit-pdf:
     toc: true
   profinit-revealjs:
@@ -27,9 +31,18 @@ Quarto nám umožňuje spojit obsah a kód do jednoho dokumentu. Více o Quarto 
 1 + 1
 ```
 
+## Matematika
+$$ \oint_{-\frac{\pi}2}^{\frac{\pi}2} x\cos x\,dx $$
+
+$$x=(x_0, ..., x_{N-1}) \in \mathbb{C}$$
+
+$$\Downarrow$$
+
+$$x=\frac{1}{\sqrt{N}} \sum_{l-0}^{N-1} x_l \cdot e^{\frac{-2\pi}{N} \cdot i \cdot k \cdot l}$$
+
 ## Obrázky
 
-![Příklad obrázku](https://amazinganimalphotos.com/wp-content/uploads/2014/11/artist-animals-funny-memes.jpg)
+![Příklad obrázku](https://imgs.xkcd.com/comics/judgment_day_2x.png)
 
 ## Tabulky
 
@@ -39,6 +52,30 @@ Quarto nám umožňuje spojit obsah a kód do jednoho dokumentu. Více o Quarto 
 | 123     | 123  |   123 |  123   |
 | 1       | 1    |     1 |   1    |
 
+
+## Font
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Duis condimentum augue id magna semper rutrum. Aliquam erat volutpat. Suspendisse sagittis ultrices augue.
+Praesent vitae arcu tempor **neque** lacinia pretium. Et harum quidem rerum facilis est et do not read lorem ipsum expedita distinctio.
+Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Duis bibendum, lectus ut viverra rhoncus,
+dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Etiam quis quam. Nulla non.
+
+## 1. Tier I
+
+Lorem ipsum dolor sit amet
+
+### 1.1 Tier II
+
+Lorem ipsum dolor sit amet
+
+### 1.2 Tier II
+
+Lorem ipsum dolor sit amet  
+
+## 2. Tier I
+
+Lorem ipsum dolor sit amet
 
 ## Citace
 
