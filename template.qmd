@@ -28,7 +28,10 @@ Quarto nám umožňuje spojit obsah a kód do jednoho dokumentu. Více o Quarto 
 ## Kód
 
 ```{python}
-print(2 * "1") # this is a sample code
+def useless_sqrt_function(n):
+  return n**(1/2)
+
+print(useless_sqrt_function(16))
 ```
 
 ## Matematika
