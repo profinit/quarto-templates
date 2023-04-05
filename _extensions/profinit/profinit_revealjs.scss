@@ -15,23 +15,17 @@ $primary:       $profinit_red !default;
 /*-- scss:rules --*/
  
 body {
-  background-image: url("profinit_bg1.svg");
+  font-family: Arial, Helvetica, sans-serif;
  }
 
 h1.title, h2.title, h3.title, h4.title, p.subtitle {
   color: $profinit_red;  
-  font-family: Arial, Helvetica, sans-serif;
+  
 }
 
 h1:not(.title), h2:not(.title), h3:not(.title), h4:not(.title) {
   color: $profinit_red;  
   font-style: normal;
-  font-family: Arial, Helvetica, sans-serif; 
-}
-/* "h1, h2, h3, h4, p.subtitle {..." does not work for some reason */
-
-p.normal {
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 strong {
