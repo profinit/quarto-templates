@@ -1,5 +1,7 @@
 ---
 title: Quarto šablona Profinitu
+execute:
+  echo: true
 author: Jan Novák
 date: last-modified
 bibliography: references.bib
@@ -25,12 +27,8 @@ Quarto nám umožňuje spojit obsah a kód do jednoho dokumentu. Více o Quarto 
 
 ## Kód
 
-```python
-print(1 + 2) // this is a sample code
-```
-
 ```{python}
-1 + 2
+print(2 * "1") # this is a sample code
 ```
 
 ## Matematika
@@ -55,13 +53,9 @@ $$x=\frac{1}{\sqrt{N}} \sum_{l-0}^{N-1} x_l \cdot e^{\frac{-2\pi}{N} \cdot i \cd
 | 1       | 1    |     1 |   1    |
 
 
-## Font
+## Highlight
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-Duis condimentum augue id magna semper rutrum. Aliquam erat volutpat. Suspendisse sagittis ultrices augue.
-Praesent vitae arcu tempor **neque** lacinia pretium. Et harum quidem rerum facilis est et do not read lorem ipsum expedita distinctio.
-Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Duis bibendum, lectus ut viverra rhoncus,
-dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Etiam quis quam. Nulla non.
+You can **highlight** what you deem important.
 
 ## 1. Tier I
 

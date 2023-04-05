@@ -4,15 +4,14 @@ contributes:
   formats:
     html:
       title-block-banner: transparent
-      theme: [default,custom_html.scss]
+      theme: [default,profinit_html.scss]
       css: logo.css
       csl: iso690-numeric-brackets-cs.csl
     pdf:
-      theme: [default, custom_pdf.scss]
       include-in-header: header.tex
       include-before-body: logo.tex
       csl: iso690-numeric-brackets-cs.csl
     revealjs:
-      theme: [default, custom_revealjs.scss]
+      theme: [default, profinit_revealjs.scss]
       logo: logo.svg
       csl: iso690-numeric-brackets-cs.csl
