@@ -8,15 +8,11 @@ $table_grey_lighter: #e3e5ea;
 $table_border: 2px;
 
 
-$primary:       $profinit_red !default;
+$primary: $profinit_red !default;
 
 /* See https://quarto.org/docs/output-formats/html-themes.html#theme-options */
 
 /*-- scss:rules --*/
- 
-body {
-  font-family: Arial, Helvetica, sans-serif;
- }
 
 h1.title, h2.title, h3.title, h4.title, p.subtitle {
   color: $profinit_red;  
@@ -27,33 +23,3 @@ h1:not(.title), h2:not(.title), h3:not(.title), h4:not(.title) {
   color: $profinit_red;  
   font-style: normal;
 }
-
-strong {
-  color: $profinit_red;
-}
-
-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
-  border: $table_border solid white;
-}
-thead {
-  background-color: $profinit_red;
-  color: white;
-}
-
-tbody tr:nth-child(odd) {
-  background-color: $table_grey_darker;
-}
-
-tbody tr:nth-child(even) {
-  background-color: $table_grey_lighter;
-}
-
-th, td {
-  border: $table_border solid white;
-  padding: 20px;
-}
-
-

@@ -5,7 +5,7 @@ execute:
 author: Jan Novák
 date: last-modified
 bibliography: references.bib
-  
+tbl-cap-location: bottom
 format:
   profinit-html:
     toc: true
@@ -54,27 +54,11 @@ $$x=\frac{1}{\sqrt{N}} \sum_{l-0}^{N-1} x_l \cdot e^{\frac{-2\pi}{N} \cdot i \cd
 | 12      | 12   |    12 |   12   |
 | 123     | 123  |   123 |  123   |
 | 1       | 1    |     1 |   1    |
+: First Table {#tbl-first}
 
+## Formatting
 
-## Highlight
-
-You can **highlight** what you deem important.
-
-## 1. Tier I
-
-Lorem ipsum dolor sit amet
-
-### 1.1 Tier II
-
-Lorem ipsum dolor sit amet
-
-### 1.2 Tier II
-
-Lorem ipsum dolor sit amet  
-
-## 2. Tier I
-
-Lorem ipsum dolor sit amet
+You can **highlight** what *you* deem ***important***. You can also add clickable [links](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
 
 ## Citace
 
