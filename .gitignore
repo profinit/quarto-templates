@@ -10,3 +10,5 @@
 venv
 template_files
 template_with_code_files
+template_r_files
+template_py_files
