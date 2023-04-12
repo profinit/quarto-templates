@@ -5,3 +5,9 @@
   background-origin: content-box; 
   background-position: 90% 50%
 }
+
+@media only screen and (max-width: 70em) {
+  .quarto-title-block .quarto-title-banner {
+    background-image: none;
+  }
+}
