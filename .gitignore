@@ -5,7 +5,8 @@
 *.md
 *.tex
 
-# Auxiliary folders used by python, R,...
+# Auxiliary folders used by quarto, python, R,...
 .ipynb_checkpoints
 venv
 template_files
+template_with_code_files
