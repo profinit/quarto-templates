@@ -13,24 +13,24 @@ Tento projekt je implementace Profinitích šablon pro Quarto.
 
 ### Instalace
 
-Nejprve provedeme instalaci šablon, abychom je v našem projektu mohli používat. Použijeme vhodnou verzi pro náš operační systém.
+Nejprve provedeme instalaci šablon, abychom je v našem projektu mohli používat. Použijeme vhodnou verzi pro náš operační systém. Nový adresář `_extension` můžeme přidat do gitu v našem projektu.
 
 #### Powershell (Win)
 
 ```powershell
 cd /dir/where/quarto/render/is/run # usually dir with qmd files
-wget https://nextcloud.profinit.eu/index.php/s/8R2gK8c8SMYkMrz/download/quarto-templates
-.zip -outfile "quarto-templates.zip"
+wget https://nextcloud.profinit.eu/index.php/s/8R2gK8c8SMYkMrz/download/quarto-templates.zip -outfile "quarto-templates.zip"
 quarto add ./quarto-templates.zip
+rm quarto-templates.zip
 ```
 
 #### Bash (Linux)
 
 ```sh
 cd /dir/where/quarto/render/is/run # usually dir with qmd files
-wget -O quarto-templates.zip https://nextcloud.profinit.eu/index.php/s/8R2gK8c8SMYkMrz/download/quarto-templates
-.zip
+wget -O quarto-templates.zip https://nextcloud.profinit.eu/index.php/s/8R2gK8c8SMYkMrz/download/quarto-templates.zip
 quarto add ./quarto-templates.zip
+rm quarto-templates.zip
 ```
 
 ### Použití
