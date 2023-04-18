@@ -1,15 +1,14 @@
-template.html
-profinit_html
-profinit_pdf
-template_html.html
-template_pdf.pdf
-template.html
-template.pdf
-template_with_code.html
-template_with_code.pdf
-template_with_code.qmd
-template_with_code_files
+# Auxiliary files created by quarto
+*.html
+*.pdf
+*.R
+*.md
+*.tex
+
+# Auxiliary folders used by quarto, python, R,...
+.ipynb_checkpoints
+venv
 template_files
-template_revealjs.html
-template_revealjs_files
-template_revealjs.qmd
+template_with_code_files
+template_r_files
+template_py_files
