@@ -1,9 +1,16 @@
-@use 'variables' as v;
+/*-- scss:defaults --*/
+
+$profinit_red: #bd3632;
+$profinit_grey: #616365;
+
+$table_grey_darker: #c2c5c7;
+$table_grey_lighter: #e3e5ea;
+$table_border: 2px;
 
 /*-- scss:rules --*/
 
 h1, h2, h3, h4, p.subtitle {
-  color: v.$profinit_red;  
+  color: $profinit_red;  
 }
 
 h4 em {
@@ -16,33 +23,33 @@ body {
 }
 
 strong {
-  color: v.$profinit_red;
+  color: $profinit_red;
 }
 
 a {
-  color: v.$profinit_red
+  color: $profinit_red
 }
 
 table {
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
-  border: v.$table_border solid white;
+  border: $table_border solid white;
 }
 thead {
-  background-color: v.$profinit_red;
+  background-color: $profinit_red;
   color: white;
 }
 
 tbody tr:nth-child(odd) {
-  background-color: v.$table_grey_darker;
+  background-color: $table_grey_darker;
 }
 
 tbody tr:nth-child(even) {
-  background-color: v.$table_grey_lighter;
+  background-color: $table_grey_lighter;
 }
 
 th, td {
-  border: v.$table_border solid white;
+  border: $table_border solid white;
   padding: 20px;
 }
