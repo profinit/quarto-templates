@@ -61,3 +61,14 @@ quarto render template.qmd --to profinit-revealjs
 ```sh
 git clone https://git.profinit.eu/DataScience/Sablony/quarto-templates
 ```
+**Vytvoření tagu:**
+
+záložka Repository &rarr; Tags &rarr; New tag
+
+**Vytvoření release:**
+
+záložka Deployments &rarr; Releases &rarr; New release
+
+- Vyplníme tag name z předošlého bodu
+- Vyplníme název release
+- Vyplníme release notes (hlavní změny oproti předošlému release)
