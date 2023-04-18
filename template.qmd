@@ -1,19 +1,22 @@
 ---
 title: Quarto šablona Profinitu
+execute:
+  echo: true
 author: Jan Novák
 date: last-modified
-lang: cs
 bibliography: references.bib
-  
+tbl-cap-location: bottom
 format:
   profinit-html:
     toc: true
+    toc-location: left
+    page-layout: full
     embed-resources: true
+    anchor-sections: true
   profinit-pdf:
     toc: true
   profinit-revealjs:
     incremental: true
-    embed-resources: true
 ---
 
 
@@ -24,12 +27,24 @@ Quarto nám umožňuje spojit obsah a kód do jednoho dokumentu. Více o Quarto 
 ## Kód
 
 ```{python}
-1 + 1
+def useless_sqrt_function(n):
+  return n**(1/2)
+
+print(useless_sqrt_function(16))
 ```
+
+## Matematika
+$$ \oint_{-\frac{\pi}2}^{\frac{\pi}2} x\cos x\,dx $$
+
+$$x=(x_0, ..., x_{N-1}) \in \mathbb{C}$$
+
+$$\Downarrow$$
+
+$$x=\frac{1}{\sqrt{N}} \sum_{l-0}^{N-1} x_l \cdot e^{\frac{-2\pi}{N} \cdot i \cdot k \cdot l}$$
 
 ## Obrázky
 
-![Příklad obrázku](https://amazinganimalphotos.com/wp-content/uploads/2014/11/artist-animals-funny-memes.jpg)
+![Příklad obrázku](https://imgs.xkcd.com/comics/judgment_day_2x.png)
 
 ## Tabulky
 
@@ -38,7 +53,11 @@ Quarto nám umožňuje spojit obsah a kód do jednoho dokumentu. Více o Quarto 
 | 12      | 12   |    12 |   12   |
 | 123     | 123  |   123 |  123   |
 | 1       | 1    |     1 |   1    |
+: První tabulka {#tbl-first}
 
+## Formátování
+
+Je tady možnost **zvýraznit** to, co je *považováno* za ***důležité***. Taky je možné přidávat [klikatelné odkazy](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
 
 ## Citace
 
