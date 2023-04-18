@@ -1,50 +1,63 @@
 # Quarto Templates
 
-Tento projekt je implementace Profinitích šablon pro quarto. V Quarto dokumentech:
+Tento projekt je implementace Profinitích šablon pro Quarto.
 
-- Přidává logo,
-- nastavuje barvy,
-- a mnoho dalších věcí!
+## Prerekvizity
+
+- Quarto.
+- (Volitelné) Python: potřeba pouze v případě, že používám pro kódové bloky Pythonu.
+- (Volitelné) R: potřeba pouze v případě, že používáme kódové bloky R.
 
 
-## Přidání do projektu
+## Pro uživatele
 
-Instaluje se do adresáře, ve kterém se nachází soubor s příponou `.qmd`.
+### Instalace
 
-```bash
-quarto add ./quarto-templates-master.zip
+Nejprve provedeme instalaci šablon, abychom je v našem projektu mohli používat. Použijeme vhodnou verzi pro náš operační systém. Nový adresář `_extension` můžeme přidat do gitu v našem projektu.
+
+#### Powershell (Win)
+
+```powershell
+cd /dir/where/quarto/render/is/run # usually dir with qmd files
+wget https://nextcloud.profinit.eu/index.php/s/8R2gK8c8SMYkMrz/download/quarto-templates.zip -outfile "quarto-templates.zip"
+quarto add ./quarto-templates.zip
+rm quarto-templates.zip
 ```
 
-**TODO: Nahrat nekam, kde k tomu bude volne pristup bez nutnosti byt prihlasen v datascience gitlabu.**
+#### Bash (Linux)
 
-## Použití
-
-Šablona podporuje následující formáty: html, pdf a revealjs (html prezentace). Abychom je využili:
-
-```bash
-quarto render file.qmd --to profinit-html
+```sh
+cd /dir/where/quarto/render/is/run # usually dir with qmd files
+wget -O quarto-templates.zip https://nextcloud.profinit.eu/index.php/s/8R2gK8c8SMYkMrz/download/quarto-templates.zip
+quarto add ./quarto-templates.zip
+rm quarto-templates.zip
 ```
 
-K renderovani dokumentu slouzi prikaz (`template.qmd` nahradit samozrejme vlastnim souborem)
+### Použití
 
-### Html
+Po instalaci již můžeme šablonu využívat. Šablona podporuje následující formáty: html, pdf a revealjs (html prezentace).
+Tyto formáty použijeme například následujícími příkazy generující soubor `template.qmd` do různých výstupních formátů.
+
+#### Html
 
 ```bash
 quarto render template.qmd --to profinit-html
 ```
 
-### Pdf
+#### Pdf
 
 ```bash
 quarto render template.qmd --to profinit-pdf
 ```
 
-### Revealjs
+#### Revealjs
 
 ```bash
 quarto render template.qmd --to profinit-revealjs
 ```
 
-## Příklad
+## Pro vývojáře
 
-Šablona `template.qmd` slouží jako příklad, který lze spustit.
+```sh
+git clone https://git.profinit.eu/DataScience/Sablony/quarto-templates
+```
