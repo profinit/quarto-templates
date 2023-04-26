@@ -72,3 +72,10 @@ záložka Deployments &rarr; Releases &rarr; New release
 - Vyplníme tag name z předošlého bodu
 - Vyplníme název release
 - Vyplníme release notes (hlavní změny oproti předošlému release)
+
+## FAQs
+
+* **Obsah slidu v reveal js je moc dlouhý** 
+
+    Existuje možnost {.scrollable}, kterou lze přidat do názvu sekce, napr. "## Tabulky {.scrollable}".
+    Viz [další informace](https://quarto.org/docs/presentations/revealjs/index.html#content-overflow).
