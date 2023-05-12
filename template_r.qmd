@@ -1,0 +1,97 @@
+---
+title: Quarto šablona Profinitu
+execute:
+  echo: true
+author: Jan Novák
+date: last-modified
+bibliography: references.bib
+tbl-cap-location: bottom
+format:
+  profinit-html:
+    toc: true
+    toc-location: left
+    page-layout: full
+    embed-resources: true
+    anchor-sections: true
+    df-print: kable
+    code-fold: true
+  profinit-pdf:
+    toc: true
+  profinit-revealjs:
+    incremental: true
+    echo: false
+---
+
+## R
+
+Ukázka kódu v R:
+
+```{r}
+
+print(Sys.time())
+
+```
+
+## Další ukázka kódu v R
+
+```{r}
+#| label: fig-time_series
+#| fig-cap: "Time series"
+#| warning: false
+#| echo: false
+
+library(ggplot2)
+library(dplyr)
+
+set.seed(0)
+
+# Dummy data - random walk
+days_count = 365
+data <- data.frame(
+  day = as.Date("2023-01-01") + (1:days_count) - 1,
+  value1 = cumsum(rnorm(days_count, 0, 1)),
+  value2 = cumsum(rnorm(days_count, 0, 2)),
+  value3 = cumsum(rnorm(days_count, 0, 3))
+)
+
+
+
+# Most basic bubble plot
+ggplot(data, aes(x=day)) +
+  geom_line(aes(y = value1), color = "darkred") + 
+  geom_line(aes(y = value2), color="steelblue") + 
+  geom_line(aes(y = value3), color="darkgreen") +
+  labs(
+    title = "Random walks trough a year",
+    subtitle = "2023",
+    caption = "Random walks in 2023",
+    x = "Time",
+    y = "Value",
+  )+
+  theme_classic()
+
+```
+
+## Ptáky
+
+::: {#fig-birds layout-ncol=2}
+![Havran](examples/rook.jpg){#fig-rook}
+
+![Krkavec](examples/raven.jpg){#fig-raven}
+
+Rozdíl mezi ptáky
+:::
+
+## Tabulka v R
+
+Pro pěkné tabulky, přidejte "df-print: kable" do profinit-html formátu v hlavičce.
+
+```{r}
+#| label: tbl-titanic
+#| tbl-cap: "Titanic dataset sample"
+
+data = read.csv(file="examples/titanic.csv")
+head(data)
+```
+
+Viď @fig-time_series nebo @tbl-titanic.
