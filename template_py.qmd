@@ -1,0 +1,100 @@
+---
+title: Quarto šablona Profinitu
+execute:
+  echo: true
+author: Jan Novák
+date: last-modified
+bibliography: references.bib
+tbl-cap-location: bottom
+format:
+  profinit-html:
+    toc: true
+    toc-location: left
+    page-layout: full
+    embed-resources: true
+    anchor-sections: true
+    code-fold: true
+  profinit-pdf:
+    toc: true
+    lot: true
+    lof: true
+  profinit-revealjs:
+    incremental: true
+    echo: false
+---
+
+
+
+
+## Úvod
+
+Dokumentace ku Quarto lze nalézt na <https://quarto.org>.
+
+## Spirála
+
+```{python}
+#| warning: false
+#| label: fig-spiral-plot
+#| fig-cap: "A pretty spiralling plot"
+
+import numpy as np
+
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+
+theta = 2 * np.pi * r
+
+fig, ax = plt.subplots(
+
+  subplot_kw = {'projection': 'polar'}
+
+)
+
+ax.plot(theta, r)
+
+ax.set_rticks([0.5, 1, 1.5, 2])
+
+ax.grid(True)
+
+plt.show()
+
+```
+
+## Ptáky
+
+::: {#fig-birds layout-ncol=2}
+![Havran](examples/rook.jpg){#fig-rook}
+
+![Krkavec](examples/raven.jpg){#fig-raven}
+
+Rozdíl mezi ptáky
+:::
+
+## Titanic
+
+```{python}
+#| label: tbl-titanic
+#| tbl-cap: "Titanic dataset sample"
+
+import pandas as pd
+import numpy as np
+from IPython.display import Markdown
+from tabulate import tabulate
+
+data = pd.read_csv("examples/titanic.csv")
+Markdown(
+  tabulate(
+    data.head(),
+    headers=list(data.columns),
+    showindex=False
+    )
+  )
+
+```
+
+Pozri @fig-spiral-plot pro prokliknutí na hezkou spirálu.
+
+Na obrázku @fig-birds můžeme vidět rozdíl medzi @fig-raven a @fig-rook.
+
+Viď tabulka @tbl-titanic.
