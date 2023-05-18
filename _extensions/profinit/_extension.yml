@@ -11,6 +11,8 @@ contributes:
       include-in-header: header.tex
       include-before-body: logo.tex
       csl: iso690-numeric-brackets-cs.csl
+      linkcolor: DarkRed
+      urlcolor: DarkRed
     revealjs:
       theme: [default, profinit_revealjs.scss]
       logo: logo.svg
