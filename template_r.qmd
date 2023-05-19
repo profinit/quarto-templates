@@ -20,6 +20,7 @@ format:
   profinit-revealjs:
     incremental: true
     echo: false
+    df-print: kable
 ---
 
 ## R
