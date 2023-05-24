@@ -20,7 +20,7 @@ format:
     lof: true
   profinit-revealjs:
     incremental: true
-    echo: false
+    echo: false 
 ---
 
 
