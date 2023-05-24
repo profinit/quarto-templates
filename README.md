@@ -79,3 +79,17 @@ záložka Deployments &rarr; Releases &rarr; New release
 
     Existuje možnost {.scrollable}, kterou lze přidat do názvu sekce, napr. "## Tabulky {.scrollable}".
     Viz [další informace](https://quarto.org/docs/presentations/revealjs/index.html#content-overflow).
+* **Chcem, aby tabulka měla dizajn profinitu**
+
+    Stačí jí přidat styl corporate-table:
+
+    ```md
+    /* tabulka */
+    : Tabulka {#tbl-id .corporate-table}
+    ```
+
+    ```md
+    {python}
+    #| class: corporate-table
+    /* Kódóva buňka generující tabulku */
+    ```

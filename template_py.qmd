@@ -76,6 +76,7 @@ Rozdíl mezi ptáky
 ```{python}
 #| label: tbl-titanic
 #| tbl-cap: "Titanic dataset sample"
+#| class: corporate-table
 
 import pandas as pd
 import numpy as np
@@ -92,6 +93,7 @@ Markdown(
   )
 
 ```
+
 
 Pozri @fig-spiral-plot pro prokliknutí na hezkou spirálu.
 

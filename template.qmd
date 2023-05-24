@@ -53,7 +53,7 @@ $$x=\frac{1}{\sqrt{N}} \sum_{l-0}^{N-1} x_l \cdot e^{\frac{-2\pi}{N} \cdot i \cd
 | 12      | 12   |    12 |   12   |
 | 123     | 123  |   123 |  123   |
 | 1       | 1    |     1 |   1    |
-: První tabulka {#tbl-first}
+: První tabulka {#tbl-first .corporate-table}
 
 ## Formátování
 
