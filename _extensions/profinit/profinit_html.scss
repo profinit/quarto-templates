@@ -32,25 +32,20 @@ a {
   color: $profinit_red
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border: $table_border solid white;
+.corporate-table table {
+    width: 100%;
+    border-collapse: collapse;
+    border: $table_border solid white;
 }
-thead {
-  background-color: $profinit_red;
-  color: white;
-}
-
-tbody tr:nth-child(odd) {
-  background-color: $table_grey_darker;
+.corporate-table thead {
+    background-color: $profinit_red;
+    color: white;
 }
 
-tbody tr:nth-child(even) {
-  background-color: $table_grey_lighter;
+.corporate-table tbody tr:nth-child(odd) {
+    background-color: $table_grey_darker;
 }
 
-th, td {
-  border: $table_border solid white;
-  padding: 20px;
+.corporate-table tbody tr:nth-child(even) {
+    background-color: $table_grey_lighter;
 }
