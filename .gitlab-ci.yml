@@ -20,8 +20,7 @@ deploy:
 
     - git remote set-url github git@github.com:profinit/quarto-templates.git
     - git fetch --all
-    - git branch -D master
-    - git checkout -b master
+    - git branch -D master; git checkout -b master || git checkout -b master
     - git push github --force
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
