@@ -5,15 +5,13 @@ deploy:
   tags:
     - quarto-templates
   image:
-    name: alpine/git:latest
+    name: alpine/git:2.40.1
     entrypoint: [""]
   stage: deploy
   script:
     - git config --global url."https://api@github.com/".insteadOf "https://github.com/"
     - git config --global url."https://ssh@github.com/".insteadOf "ssh://git@github.com/"
     - git config --global url."https://git@github.com/".insteadOf "git@github.com:"
-    - git config --global user.name "CI"
-    - git config --global user.email "CI@git.profinit.eu"
     - echo 'echo $GITHUB_ACCESS_TOKEN' > $HOME/.git_askpass.sh
     - chmod +x $HOME/.git_askpass.sh
     - export GIT_ASKPASS=$HOME/.git_askpass.sh
