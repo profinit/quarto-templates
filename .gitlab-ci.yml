@@ -1,0 +1,28 @@
+stages:
+  - deploy
+
+deploy:
+  tags:
+    - quarto-templates
+  image:
+    name: alpine/git:latest
+    entrypoint: [""]
+  stage: deploy
+  script:
+    - git config --global url."https://api@github.com/".insteadOf "https://github.com/"
+    - git config --global url."https://ssh@github.com/".insteadOf "ssh://git@github.com/"
+    - git config --global url."https://git@github.com/".insteadOf "git@github.com:"
+    - git config --global user.name "CI"
+    - git config --global user.email "CI@git.profinit.eu"
+    - echo 'echo $GITHUB_ACCESS_TOKEN' > $HOME/.git_askpass.sh
+    - chmod +x $HOME/.git_askpass.sh
+    - export GIT_ASKPASS=$HOME/.git_askpass.sh
+
+    - git remote set-url github git@github.com:profinit/quarto-templates.git
+    - git fetch --all
+    - git branch -D main
+    - git checkout -b main
+    - git push github --force
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      when: manual
