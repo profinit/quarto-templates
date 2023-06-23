@@ -9,7 +9,6 @@ deploy:
     entrypoint: [""]
   stage: deploy
   script:
-    - git config --global url."https://api@github.com/".insteadOf "https://github.com/"
     - git config --global url."https://ssh@github.com/".insteadOf "ssh://git@github.com/"
     - git config --global url."https://git@github.com/".insteadOf "git@github.com:"
     - echo 'echo $GITHUB_ACCESS_TOKEN' > $HOME/.git_askpass.sh
