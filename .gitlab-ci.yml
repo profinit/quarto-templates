@@ -13,7 +13,7 @@ deploy:
     - chmod +x $HOME/.git_askpass.sh
     - export GIT_ASKPASS=$HOME/.git_askpass.sh
 
-    - git remote set-url github https://git@github.com:profinit/quarto-templates.git
+    - git remote set-url github https://git@github.com/profinit/quarto-templates.git
     - git fetch --all
     - git checkout master || git checkout -b master
     - git push github --force
