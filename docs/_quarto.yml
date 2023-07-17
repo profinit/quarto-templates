@@ -1,0 +1,19 @@
+project:
+  type: website
+
+website:
+  title: "Quarto templates"
+  favicon: data/favicon.png
+  navbar:
+    left:
+      - href: index.qmd
+        text: Domov
+      - prerequisites.qmd
+      - user_guide.qmd
+      - dev_guide.qmd
+      - faqs.qmd
+    background: "#bd3632"
+  
+format:
+  profinit-html:
+    toc: true

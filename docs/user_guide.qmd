@@ -1,0 +1,48 @@
+---
+title: "Pro uživatele"
+---
+
+### Instalace
+
+Nejprve provedeme instalaci šablon, abychom je v našem projektu mohli používat. Použijeme vhodnou verzi pro náš operační systém. Nový adresář `_extension` můžeme přidat do gitu v našem projektu.
+
+#### Powershell (Win)
+
+```powershell
+cd /dir/where/quarto/render/is/run # usually dir with qmd files
+wget https://nextcloud.profinit.eu/index.php/s/8R2gK8c8SMYkMrz/download/quarto-templates.zip -outfile "quarto-templates.zip"
+quarto add ./quarto-templates.zip
+rm quarto-templates.zip
+```
+
+#### Bash (Linux)
+
+```sh
+cd /dir/where/quarto/render/is/run # usually dir with qmd files
+wget -O quarto-templates.zip https://nextcloud.profinit.eu/index.php/s/8R2gK8c8SMYkMrz/download/quarto-templates.zip
+quarto add ./quarto-templates.zip
+rm quarto-templates.zip
+```
+
+### Použití
+
+Po instalaci již můžeme šablonu využívat. Šablona podporuje následující formáty: html, pdf a revealjs (html prezentace).
+Tyto formáty použijeme například následujícími příkazy generující soubor `template.qmd` do různých výstupních formátů.
+
+#### Html
+
+```bash
+quarto render template.qmd --to profinit-html
+```
+
+#### Pdf
+
+```bash
+quarto render template.qmd --to profinit-pdf
+```
+
+#### Revealjs
+
+```bash
+quarto render template.qmd --to profinit-revealjs
+```
