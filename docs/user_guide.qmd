@@ -1,0 +1,26 @@
+---
+title: "Pro uživatele"
+---
+
+## Použití
+
+Šablona podporuje následující formáty: html, pdf a revealjs (html prezentace).
+Tyto formáty použijeme například následujícími příkazy generující soubor `template.qmd` do různých výstupních formátů.
+
+### Html
+
+```bash
+quarto render template.qmd --to profinit-html
+```
+
+### Pdf
+
+```bash
+quarto render template.qmd --to profinit-pdf
+```
+
+### Revealjs
+
+```bash
+quarto render template.qmd --to profinit-revealjs
+```
