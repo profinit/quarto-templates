@@ -17,3 +17,5 @@ website:
 format:
   profinit-html:
     toc: true
+
+lang: cs
