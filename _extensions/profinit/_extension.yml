@@ -6,10 +6,7 @@ contributes:
       title-block-banner: transparent
       theme: [default,profinit_html.scss]
       css: logo.css
-      csl: iso690-numeric-brackets-cs.csl
-      include-in-header:
-        - text: |
-            <link rel = "shortcut icon" href = "_extensions/profinit/favicon.png" /> 
+      csl: iso690-numeric-brackets-cs.csl 
     pdf:
       include-in-header: header.tex
       include-before-body: logo.tex
@@ -20,7 +17,4 @@ contributes:
       theme: [default, profinit_revealjs.scss]
       logo: logo.svg
       csl: iso690-numeric-brackets-cs.csl
-      include-in-header:
-        - text: |
-            <link rel = "shortcut icon" href = "_extensions/profinit/favicon.png" />
 
