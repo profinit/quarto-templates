@@ -3,19 +3,28 @@ project:
 
 website:
   title: "Quarto templates"
-  favicon: data/favicon.png
-  navbar:
-    left:
-      - href: index.qmd
-        text: Domov
-      - prerequisites.qmd
-      - user_guide.qmd
+  favicon: _extensions/profinit/favicon.png
+  repo-url: https://git.profinit.eu/datascience/sablony/quarto-templates
+  repo-branch: master
+  repo-subdir: docs
+  repo-actions: [edit, issue]
+  sidebar: 
+    style: docked
+    contents: 
+      - quick_start.qmd
       - dev_guide.qmd
       - faqs.qmd
+      - section: examples/examples.qmd
+        contents: 
+        - examples/template.qmd
+        - examples/template_py.qmd
+        - examples/template_r.qmd
     background: "#bd3632"
+    foreground: "#ffffff"
+    
   
 format:
   profinit-html:
     toc: true
-
-lang: cs
+    title-block-banner: false
+    lang: cs

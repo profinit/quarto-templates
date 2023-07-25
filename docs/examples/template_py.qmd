@@ -1,5 +1,5 @@
 ---
-title: Quarto šablona Profinitu
+title: Quarto šablona - Python
 execute:
   echo: true
 author: Jan Novák
@@ -9,18 +9,11 @@ tbl-cap-location: bottom
 format:
   profinit-html:
     toc: true
-    toc-location: left
+    toc-location: right
     page-layout: full
     embed-resources: true
     anchor-sections: true
     code-fold: true
-  profinit-pdf:
-    toc: true
-    lot: true
-    lof: true
-  profinit-revealjs:
-    incremental: true
-    echo: false 
 ---
 
 
@@ -64,9 +57,9 @@ plt.show()
 ## Ptáky
 
 ::: {#fig-birds layout-ncol=2}
-![Havran](examples/rook.jpg){#fig-rook}
+![Havran](rook.jpg){#fig-rook}
 
-![Krkavec](examples/raven.jpg){#fig-raven}
+![Krkavec](raven.jpg){#fig-raven}
 
 Rozdíl mezi ptáky
 :::
@@ -83,7 +76,7 @@ import numpy as np
 from IPython.display import Markdown
 from tabulate import tabulate
 
-data = pd.read_csv("examples/titanic.csv")
+data = pd.read_csv("titanic.csv")
 Markdown(
   tabulate(
     data.head(),

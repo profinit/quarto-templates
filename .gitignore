@@ -18,3 +18,5 @@ template_py_files
 
 # Quarto website files
 docs/_site
+docs/site_libs
+site_libs

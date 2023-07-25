@@ -1,5 +1,5 @@
 ---
-title: Quarto šablona Profinitu
+title: Quarto šablona - R
 execute:
   echo: true
 author: Jan Novák
@@ -9,18 +9,12 @@ tbl-cap-location: bottom
 format:
   profinit-html:
     toc: true
-    toc-location: left
+    toc-location: right
     page-layout: full
     embed-resources: true
     anchor-sections: true
     df-print: kable
     code-fold: true
-  profinit-pdf:
-    toc: true
-  profinit-revealjs:
-    incremental: true
-    echo: false
-    df-print: kable
 ---
 
 ## R
@@ -91,7 +85,7 @@ Pro pěkné tabulky, přidejte "df-print: kable" do profinit-html formátu v hla
 #| label: tbl-titanic
 #| tbl-cap: "Titanic dataset sample"
 
-data = read.csv(file="examples/titanic.csv")
+data = read.csv(file="titanic.csv")
 head(data)
 ```
 

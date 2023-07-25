@@ -1,6 +1,16 @@
 ---
-title: "Pro uživatele"
+title: "Jak začít"
 ---
+
+## Prerekvizity
+
+- Quarto.
+- (Volitelné) Python: potřeba pouze v případě, že používám pro kódové bloky Pythonu.
+- (Volitelné) R: potřeba pouze v případě, že používáme kódové bloky R
+
+## Instalace
+
+*TBD*
 
 ## Použití
 

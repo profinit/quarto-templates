@@ -1,5 +1,5 @@
 ---
-title: Quarto šablona Profinitu
+title: Quarto šablona - generická
 execute:
   echo: true
 author: Jan Novák
@@ -9,14 +9,10 @@ tbl-cap-location: bottom
 format:
   profinit-html:
     toc: true
-    toc-location: left
+    toc-location: right
     page-layout: full
     embed-resources: true
     anchor-sections: true
-  profinit-pdf:
-    toc: true
-  profinit-revealjs:
-    incremental: true
 ---
 
 
