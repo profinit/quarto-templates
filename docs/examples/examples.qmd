@@ -1,0 +1,8 @@
+---
+title: "Příklady"
+---
+
+* Ukázkové šablony v quarto, ukazující základní použití, zobrazování tabulek, kódu v pythonu, R a jiné
+
+* Kliknutím na "Upravit stránku" je možno vidět zdrojový kód .qmd souboru, který generuje danou stránku
+
