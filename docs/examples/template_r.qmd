@@ -15,6 +15,10 @@ format:
     anchor-sections: true
     df-print: kable
     code-fold: true
+  profinit-pdf:
+    toc: true
+    lot: true
+    lof: true
 ---
 
 ## R
@@ -70,9 +74,9 @@ ggplot(data, aes(x=day)) +
 ## Ptáky
 
 ::: {#fig-birds layout-ncol=2}
-![Havran](examples/rook.jpg){#fig-rook}
+![Havran](rook.jpg){#fig-rook}
 
-![Krkavec](examples/raven.jpg){#fig-raven}
+![Krkavec](raven.jpg){#fig-raven}
 
 Rozdíl mezi ptáky
 :::

@@ -13,6 +13,10 @@ format:
     page-layout: full
     embed-resources: true
     anchor-sections: true
+  profinit-pdf:
+    toc: true
+    lot: true
+    lof: true
 ---
 
 
