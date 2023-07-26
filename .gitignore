@@ -4,6 +4,11 @@
 *.R
 *.md
 *.tex
+*.lof
+*.lot
+*.toc
+*.aux
+*.log
 
 # Auxiliary folders used by quarto, python, R,...
 .ipynb_checkpoints
