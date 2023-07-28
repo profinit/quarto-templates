@@ -17,6 +17,9 @@ format:
     toc: true
     lot: true
     lof: true
+  profinit-revealjs:
+    incremental: true
+    output-file: template_revealjs.html
 ---
 
 

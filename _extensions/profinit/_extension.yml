@@ -10,6 +10,8 @@ contributes:
     pdf:
       include-in-header: header.tex
       include-before-body: logo.tex
+      format-resources:
+        - "logo.pdf"
       csl: iso690-numeric-brackets-cs.csl
       linkcolor: DarkRed
       urlcolor: DarkRed
