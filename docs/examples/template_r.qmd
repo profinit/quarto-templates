@@ -19,6 +19,14 @@ format:
     toc: true
     lot: true
     lof: true
+  profinit-revealjs:
+    incremental: true
+    echo: false
+    anchor-sections: true
+    df-print: kable
+    code-fold: true
+    output-file: template_r_revealjs.html
+
 ---
 
 ## R
@@ -89,7 +97,7 @@ Pro pěkné tabulky, přidejte "df-print: kable" do profinit-html formátu v hla
 #| label: tbl-titanic
 #| tbl-cap: "Titanic dataset sample"
 
-data = read.csv(file="titanic.csv")
+data = read.csv(file="examples/titanic.csv")
 head(data)
 ```
 
