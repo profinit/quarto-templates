@@ -1,0 +1,18 @@
+---
+title: "Příklady"
+---
+
+Tato sekce se zabývá demonstrací základních schopností v Quarto. Příklady se věnují zejména tomu, jak:
+
+- Vytvořit základní šablonu.
+- Zobrazit obrázky, tabulky, kód.
+- Bez připojeného jazyka, bez Pythonu a R.
+
+Kliknutím na **Upravit stránku** je možné zobrazit zdrojový kód qmd souboru, který generuje tuto stránku.
+
+::: {.callout-tip}
+
+Při použití Pythonu Quarto při generování výstupu interně nejprve vygeneruje Jupyterovský notebook s příponou `.ipynb`, ten až poté spustí a vygeneruje do html. Tento krok lze obejít a stále lze psát Jupyterovské notebooky, a nechat renderovat přímo je.
+
+:::
+

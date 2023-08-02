@@ -4,7 +4,7 @@ contributes:
   formats:
     html:
       title-block-banner: transparent
-      theme: [default,profinit_html.scss]
+      theme: [default, profinit_html.scss]
       css: logo.css
       csl: iso690-numeric-brackets-cs.csl 
     pdf:

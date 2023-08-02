@@ -1,0 +1,115 @@
+---
+title: "Instalace projektu"
+format:
+    profinit-html:
+        number-sections: true
+---
+
+V tomto dokumentu popíšeme, jak nainstalovat tento projekt z vývojářského úhlu pohledu. Budeme instalovat tedy všechny závislosti a programy, které jsou na vývoj potřeba.
+
+## Naklonování projektu
+
+::: {.panel-tabset}
+
+## Linux (http)
+
+```sh
+git clone https://git.profinit.eu/DataScience/Sablony/quarto-templates
+```
+
+## Linux (ssh)
+
+```sh
+git clone git@git.profinit.eu:datascience/sablony/quarto-templates.git
+```
+
+## Windows (http)
+
+```sh
+git clone -c core.symlinks=true https://git.profinit.eu/datascience/sablony/quarto-templates.git
+```
+
+## Windows (ssh)
+
+```sh
+git clone -c core.symlinks=true git@git.profinit.eu:datascience/sablony/quarto-templates.git
+```
+
+:::
+
+## Instalace Quarto
+
+Instalace Quarto je popsána [v dokumentaci Quarto](https://quarto.org/).
+
+## Instalace Pythonu
+
+Pro spuštění Quarto dokumentů s kódovými buňkami psanými v Pythonu je nutné nainstalovat Python. Vhodné instalační skripty lze nalézt [zde](https://www.python.org/downloads/). Doporučujeme Python verze alespoň 3.10, ale bude pravděpodobně fungovat i s nižšími.
+
+Poté vytvoříme a aktivujeme virtuální prostředí následujícími příkazy:
+
+::: {.panel-tabset}
+
+### Linux
+
+```{.sh}
+python -m venv "venv"
+source venv/bin/activate
+python -m pip install -r "requirements.txt"
+```
+
+### Windows (Powershell)
+
+```{.powershell}
+python -m venv "venv"
+./venv/Scripts/Activate.ps1
+python -m pip install -r "requirements.txt"
+```
+
+:::
+
+## Instalace R
+
+TODO
+
+## Kontrola instalace
+
+Po instalaci všech nutných komponent doporučujeme spustit následující příkaz pro kontrolu, že instalace proběhla v pořádku:
+
+```{.sh}
+quarto check
+```
+
+Tento příkaz by měl vrátit přibližně následující výstup:
+
+```
+[✓] Checking versions of quarto binary dependencies...
+      Pandoc version 3.1.1: OK
+      Dart Sass version 1.55.0: OK
+[✓] Checking versions of quarto dependencies......OK
+[✓] Checking Quarto installation......OK
+      Version: 1.3.433
+      Path: /opt/quarto/1.3.433/bin
+
+[✓] Checking basic markdown render....OK
+
+[✓] Checking Python 3 installation....OK
+      Version: 3.10.10
+      Path: /home/username/quarto-templates/venv/bin/python3
+      Jupyter: 5.3.0
+      Kernels: python3, jmeno_kernelu
+
+[✓] Checking Jupyter engine render....OK
+
+[✓] Checking R installation...........OK
+      Version: 4.3.0
+      Path: /usr/lib64/R
+      LibPaths:
+        - /usr/lib64/R/library
+        - /usr/share/R/library
+      knitr: 1.42
+      rmarkdown: 2.20
+
+[✓] Checking Knitr engine render......OK
+```
+
+Pokud nějaká část selhala, je nutné opravit její instalaci.

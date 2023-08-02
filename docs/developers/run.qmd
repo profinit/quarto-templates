@@ -1,0 +1,14 @@
+---
+title: Spuštění
+---
+
+## Dokumentace
+
+V tomto projektu můžeme spustit pouze generování dokumentace.
+
+```{.sh}
+cd docs/
+quarto render . --to profinit-html
+```
+
+Alternativně můžeme použít příkaz `preview` na její zobrazení.

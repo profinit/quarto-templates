@@ -1,27 +1,46 @@
 project:
   type: website
-  execute-dir: project
 
 website:
-  title: "Quarto templates"
+  title: "Quarto Templates"
   favicon: _extensions/profinit/favicon.png
   repo-url: https://git.profinit.eu/datascience/sablony/quarto-templates
   repo-branch: master
   repo-subdir: docs
-  repo-actions: [edit, issue]
-  sidebar: 
-    style: docked
-    contents: 
-      - quick_start.qmd
-      - dev_guide.qmd
-      - faqs.qmd
-      - section: examples/examples.qmd
-        contents: 
-        - examples/template.qmd
-        - examples/template_py.qmd
-        - examples/template_r.qmd
+  repo-actions: [edit]
+
+  navbar:
     background: "#bd3632"
     foreground: "#ffffff"
+    search: true
+    tools:
+      - icon: git
+        url: https://git.profinit.eu/datascience/sablony/quarto-templates
+    left:
+      - sidebar:users
+      - sidebar:developers
+  sidebar: 
+    - id: users
+      title: Pro uživatele
+      style: docked
+      contents: 
+        - users/quickstart.qmd
+        - users/tricks.qmd
+        - section: users/examples/index.qmd
+          contents: 
+            - text: Bez kódu
+              file: users/examples/example.qmd
+            - text: Python
+              file: users/examples/example_py.qmd
+            - text: R
+              file: users/examples/example_r.qmd
+    - id: developers
+      title: Pro vývojáře
+      style: docked
+      contents:
+        - developers/install.qmd
+        - developers/run.qmd
+        - developers/release.qmd
     
   
 format:

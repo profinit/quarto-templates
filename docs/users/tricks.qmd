@@ -1,0 +1,127 @@
+---
+title: Tipy a triky
+---
+
+## Vývojové prostředí
+
+Jako vývojové prostředí doporučujeme používat:
+
+- Python: Visual Studio Code. Více informací lze nalézt [zde](https://quarto.org/docs/tools/vscode.html).
+- R: RStudio IDE. Více informací lze nalézt [zde](https://quarto.org/docs/tools/rstudio.html).
+
+## Duplikátní instalace šablon
+
+V návodu jsme bylo pro zjednodušení při instalaci uvedeno, že šablony je nutné nainstalovat ke každému `qmd` souboru. Tomuto se však lze vyhnout několika způsoby:
+
+
+### Quarto Project
+
+[Quarto Project](https://quarto.org/docs/projects/quarto-projects.html) nám umožňuje seskupit několik reportů do jednoho projektu. Tyto projekty pak můžeme spolu renderovat a jinak je globálně nastavovat. Šablonu tak lze nainstalovat pouze do root adresáře quarto projektu.
+
+Příklad adresářové struktury:
+
+```
+quarto_project/
+    _extensions/  # nainstalovaná profinití šablona sídlí zde
+    _quarto.yml  # konfigurační soubor pro Quarto Project
+    report1.qmd
+    report2.qmd
+```
+
+### Link
+
+Místo duplikace můžeme do potřebných míst zavést odkaz (symlink) na adresář `_extensions`.
+
+::: {.panel-tabset}
+
+#### Linux
+
+```sh
+ln -s /path/to/original/directory /path/to/symlink
+```
+
+::::
+
+## Python: Renderování tabulek
+
+**Doporučujeme před vyrenderováním převést tabulku do Markdownu**. Toto umožní, abychom se na tu tabulku pak v textu referencovali. Toto kromě běžného balíčku `pandas` vyžaduje balíček `tabulate`.
+
+Například:
+
+```{python}
+#| label: tbl-example
+#| tbl-cap: "Příklad tabulky"
+
+import pandas as pd
+import numpy as np
+from IPython.display import Markdown
+from tabulate import tabulate
+
+data = pd.DataFrame({"sex": ["male", "female"], "age": [15, 16]})
+Markdown(
+  tabulate(
+    data.head(),
+    headers=list(data.columns),
+    showindex=False
+    )
+  )
+```
+
+Na tuto tabulku se pak můžeme pomocí labelu odkázat následujícím způsobem: @tbl-example.
+
+## Styly tabulek
+
+### Korporátní vzhled
+
+Stačí jí přidat CSS třídu `corporate-table` následujícím způsobem.
+
+::: {.panel-tabset}
+
+#### Markdown
+
+```{.markdown}
+
+| sex      | age |
+|----------|-----|
+| male     | 16  |
+| female   | 15  |
+: Příklad korporátní tabulky v Markdownu {#tbl-corporate-md .corporate-table}
+```
+
+#### Python
+
+```{.python}
+#| class: corporate-table
+#| label: tbl-corporate-python
+#| tbl-cap: "Příklad korporátní tabulky v Pythonu"
+
+import pandas as pd
+import numpy as np
+from IPython.display import Markdown
+from tabulate import tabulate
+
+data = pd.DataFrame({"sex": ["male", "female"], "age": [15, 16]})
+Markdown(
+  tabulate(
+    data.head(),
+    headers=list(data.columns),
+    showindex=False
+    )
+  )
+```
+
+#### R
+
+TODO
+
+:::
+
+## RevealJS: Příliš dlouhý obsah slajdu
+
+Můžeme vyřešit pomocí možnosti `{.scrollable}`, kterou lze přidat za nadpis.
+
+Například:
+
+```{.markdown}
+## Tabulky {.scrollable}
+```

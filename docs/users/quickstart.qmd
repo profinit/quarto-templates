@@ -1,6 +1,10 @@
-# Quarto Templates
-
-Tento projekt je implementace Profinitích šablon pro Quarto.
+---
+title: "Jak začít"
+format:
+    profinit-html:
+        number-sections: true
+        number-depth: 2
+---
 
 ## Prerekvizity
 
@@ -13,7 +17,7 @@ Tento projekt je implementace Profinitích šablon pro Quarto.
 V Pythonu chceme mít nainstalované následující balíčky:
 
 - `jupyter`: nutné pro generování reportů.
-- (Doporučené) `tabulate`: doporučené, pro lepší práci s tabulkami.
+- (Doporučené) `tabulate`: doporučené, pro lepší práci s tabulkami, viz [Renderování tabulek v Pythonu](tricks.qmd#python-renderování-tabulek).
 
 ## Instalace
 
@@ -21,27 +25,37 @@ Uvažujme, že máme nějaký soubor `file.qmd`, který pomocí Quarto chceme vy
 
 Pak před instalací nejprve musíme jít do adresáře, kde tento soubor je.
 
+::: {.panel-tabset}
+
 ### Linux
 
-```sh
+```{.sh}
 cd /path/to/file/qmd/directory
 ```
 
 ### Windows (Powershell)
 
-```powershell
+```{.ps1}
 cd /path/to/file/qmd/directory
 ```
 
+:::
+
 Nyní do tohoto adresáře nainstalujeme Profinití Quarto šablony.
 
-**TODO: Tato sekce bude dodána, jakmile bude zveřejněn projekt na GitHubu.**
+::: {.callout-note}
+
+TODO: Tato sekce bude dodána, jakmile bude zveřejněn projekt na GitHubu.
+
+:::
 
 Tento příkaz přidá složku `_extensions` do pracovního adresáře.
 
 ## Použití
 
 Nyní jsme v adresáři s `file.qmd`. Teď už použitím následujících příkazů
+
+::: {.panel-tabset}
 
 ### Html
 
@@ -61,10 +75,16 @@ quarto render file.qmd --to profinit-pdf
 quarto render file.qmd --to profinit-revealjs
 ```
 
+:::
+
 Také lze použít Quarto pro vyrenderování všech nakonfigurovaných formátů v Quarto hlavičce:
 
-```sh
+```{.sh}
 quarto render file.qmd
 ```
 
+::: {.callout-note}
+
 Při renderování musí být v adresáři, ze kterého spouštíme renderování, nainstalované Profinití Quarto šablony.
+
+:::

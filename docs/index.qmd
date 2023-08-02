@@ -1,5 +1,28 @@
 ---
-title: "Quarto šablony - dokumentace"
+title: "Vítejte v Quarto Templates"
+subtitle: zprofiniťujeme reporty již `0` let
+format:
+    profinit-html:
+        toc: false
 ---
 
-Dokumentace k profinitím šablonám pro Quarto
+Tento projekt implementuje Profinití stylování pro Quarto dokumenty.
+
+**V našich stylech podporujeme tyto formáty**:
+
+- html,
+- pdf,
+- revealjs (html prezentace).
+
+Tato dokumentace primárně to, jak:
+
+- Nainstalovat a používat Quarto šablony.
+- Nainstalovat projekt Quarto šablon a rozšiřovat ho.
+
+Samotnou dokumentací se lze také inspirovat!
+
+::: {.hero-buttons}
+[Jak začít](users/quickstart.qmd){.btn-secondary .btn .btn-lg role="button"}
+[Tipy a triky](users/tricks.qmd){.btn-secondary .btn .btn-lg role="button"}
+[Příklady](users/examples/index.qmd){.btn-secondary .btn .btn-lg role="button"}
+::: 

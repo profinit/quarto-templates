@@ -1,5 +1,5 @@
 ---
-title: Quarto šablona - R
+title: Příklad (R)
 execute:
   echo: true
 author: Jan Novák
@@ -79,7 +79,7 @@ ggplot(data, aes(x=day)) +
 
 ```
 
-## Ptáky
+## Ptáci
 
 ::: {#fig-birds layout-ncol=2}
 ![Havran](rook.jpg){#fig-rook}
@@ -91,14 +91,14 @@ Rozdíl mezi ptáky
 
 ## Tabulka v R
 
-Pro pěkné tabulky, přidejte "df-print: kable" do profinit-html formátu v hlavičce.
+Pro pěkné tabulky přidejte `df-print: kable` do profinit-html formátu v hlavičce.
 
 ```{r}
 #| label: tbl-titanic
 #| tbl-cap: "Titanic dataset sample"
 
-data = read.csv(file="examples/titanic.csv")
+data = read.csv(file="titanic.csv")
 head(data)
 ```
 
-Viď @fig-time_series nebo @tbl-titanic.
+Viz @fig-time_series nebo @tbl-titanic.
