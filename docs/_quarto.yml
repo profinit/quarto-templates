@@ -3,7 +3,7 @@ project:
 
 website:
   title: "Quarto Templates"
-  favicon: _extensions/profinit/favicon.png
+  favicon: favicon.png
   repo-url: https://git.profinit.eu/datascience/sablony/quarto-templates
   repo-branch: master
   repo-subdir: docs
