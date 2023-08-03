@@ -1,9 +1,63 @@
 stages:
+  - docs
   - deploy
 
-deploy:
+variables:
+  QUARTO_VERSION: "1.3.151"
+
+# NOTE: requires functional docker on the machine of the runner
+docs:
+  image: python:3.10.10-slim
+  stage: docs
+  before_script:
+    # Install system libraries
+    - apt-get update && apt-get install -y
+    - |
+      apt-get install -y r-base \
+        libcurl4-openssl-dev \
+        libssl-dev \
+        libxml2-dev \
+        libfontconfig1-dev \
+        libharfbuzz-dev \
+        libfreetype6-dev \
+        libjpeg62-turbo-dev \
+        libpng-dev \
+        libtiff5-dev \
+        libgl1-mesa-dev \
+        pandoc \
+        curl \
+        wget \
+        && rm -rf /var/lib/apt/lists/*
+    # Download and install Quarto
+    - mkdir -p /opt/quarto/${QUARTO_VERSION}
+    - |
+      curl -o quarto.tar.gz -L \
+        "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz"
+    - |
+      tar -zxvf quarto.tar.gz \
+        -C "/opt/quarto/${QUARTO_VERSION}" \
+        --strip-components=1
+    - rm quarto.tar.gz
+    - ln -s /opt/quarto/${QUARTO_VERSION}/bin/quarto /usr/local/bin/quarto
+    - quarto install tinytex
+    # Install R packages
+    - echo 'options(repos = c(REPO_NAME = "https://packagemanager.rstudio.com/all/latest"))' >> /etc/R/Rprofile.site
+    - R -e "install.packages(c('dplyr', 'ggplot2', 'rmarkdown'))"
+    # Install Python packages
+    - python -m pip install -r "requirements.txt"
+    # Print versions
+    - quarto check
+  script:
+    - cd docs/ && quarto render . --to profinit-html && cd ..
+    - mv docs/_site public
+  artifacts:
+    paths:
+      - public
+  when: manual
   tags:
     - quarto-templates
+
+deploy-github:
   image:
     name: alpine/git:2.40.1
     entrypoint: [""]
@@ -20,3 +74,9 @@ deploy:
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
       when: manual
+  tags:
+    - quarto-templates
+
+
+
+
