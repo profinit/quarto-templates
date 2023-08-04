@@ -40,7 +40,6 @@ website:
       contents:
         - developers/install.qmd
         - developers/run.qmd
-        - developers/deploy.qmd
         - developers/release.qmd
     
   
