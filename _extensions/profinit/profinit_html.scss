@@ -1,5 +1,6 @@
 /*-- scss:defaults --*/
 
+
 $profinit_red: #bd3632;
 $profinit_grey: #616365;
 
@@ -7,15 +8,8 @@ $table_grey_darker: #c2c5c7;
 $table_grey_lighter: #e3e5ea;
 $table_border: 2px;
 
-$link_color: $profinit_red;
-
-$toc-color: $profinit_red;
-
-$navbar-bg: $profinit_red;
-$navbar-fg: white;
-
-$sidebar-bg: white;
-$sidebar-fg: $profinit_grey;
+$link-color: $profinit_red;
+$primary: $profinit_red !default;
 
 /*-- scss:rules --*/
 
