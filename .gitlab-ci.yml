@@ -8,7 +8,7 @@ variables:
   DOCS_PORT: 31270
 
 
-docs:
+docs-vm-local:
   stage: docs
   script:
     - docker image build . -t "${DOCS_IMAGE_NAME}" -f ".docker/docs.dockerfile"
@@ -40,7 +40,8 @@ deploy-github:
     - git checkout master || git checkout -b master
     - git push github --force
   rules:
-    - if: $CI_COMMIT_BRANCH == "master"
+    - if: '$CI_COMMIT_REF_NAME == "master"'
       when: manual
+    - if: '$CI_COMMIT_REF_NAME == "master" && $CI_COMMIT_TAG'
   tags:
     - quarto-templates
