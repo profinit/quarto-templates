@@ -2,7 +2,7 @@
 
 Tento projekt je implementace Profinitích šablon pro Quarto.
 
-- Dokumentace: http://vm-dtsc:31555/ (nutné být na vpn gr501).
+- Dokumentace: http://vm-dtsc:31270/ (nutné být na vpn gr501).
 
 ## Prerekvizity
 
