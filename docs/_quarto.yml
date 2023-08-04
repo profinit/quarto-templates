@@ -10,8 +10,6 @@ website:
   repo-actions: [edit]
 
   navbar:
-    background: "#bd3632"
-    foreground: "#ffffff"
     search: true
     tools:
       - icon: git
