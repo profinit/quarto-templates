@@ -20,7 +20,7 @@ format:
     lof: true
   profinit-revealjs:
     incremental: true
-    output-file: template_py_revealjs.html
+    output-file: example_py_revealjs.html
 ---
 
 

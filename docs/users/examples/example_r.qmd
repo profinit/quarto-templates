@@ -25,7 +25,7 @@ format:
     anchor-sections: true
     df-print: kable
     code-fold: true
-    output-file: template_r_revealjs.html
+    output-file: example_r_revealjs.html
 
 ---
 
