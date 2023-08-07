@@ -37,7 +37,9 @@ cd /path/to/file/qmd/directory
 
 Nyní do tohoto adresáře nainstalujeme Profinití Quarto šablony.
 
-**TODO: Tato sekce bude dodána, jakmile bude zveřejněn projekt na GitHubu.**
+```bash
+quarto add profinit/quarto-templates
+```
 
 Tento příkaz přidá složku `_extensions` do pracovního adresáře.
 
