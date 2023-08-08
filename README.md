@@ -45,7 +45,7 @@ Tento příkaz přidá složku `_extensions` do pracovního adresáře.
 
 ## Použití
 
-Nyní jsme v adresáři s `file.qmd`. Teď už použitím následujících příkazů
+Nyní jsme v adresáři s `file.qmd`. Při renderování musí být v adresáři, ze kterého spouštíme renderování, nainstalované Profinití Quarto šablony. Teď už použitím následujících příkazů.
 
 ### Html
 
@@ -65,10 +65,11 @@ quarto render file.qmd --to profinit-pdf
 quarto render file.qmd --to profinit-revealjs
 ```
 
+### Všechny nakonfigurované formáty
+
 Také lze použít Quarto pro vyrenderování všech nakonfigurovaných formátů v Quarto hlavičce:
 
 ```sh
 quarto render file.qmd
 ```
 
-Při renderování musí být v adresáři, ze kterého spouštíme renderování, nainstalované Profinití Quarto šablony.
