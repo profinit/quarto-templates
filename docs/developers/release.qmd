@@ -7,6 +7,5 @@ title: Release
     - Jméno na verzi, která je v atributu `version` ve výše zmíněném souboru.
     - Tag na verzi, která je v atributu `version`.
     - Vyplním release notes. V nich vyzdvihnu, co se změnilo od minulé verze.
-3. Spustím `deploy` stage v gitlabovské pipelině, která:
-    - Aktualizuje github repozitář.
-    - Nasadí aktualizovanou dokumentaci na naši vm.
+
+Po vytvoření releasu se automaticky spustí deploy dokumentace na naši vm a nové verze na github.
