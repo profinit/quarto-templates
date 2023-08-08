@@ -21,7 +21,7 @@ docs-vm-local:
       fi
     - docker container run -d -p ${DOCS_PORT}:5000 --name "${DOCS_CONTAINER_NAME}" ${DOCS_IMAGE_NAME} quarto preview . --host 0.0.0.0 --port 5000 --render all
   only:
-    - master
+    - main
   when: manual
   tags:
     - shell
@@ -45,7 +45,7 @@ github:
     # push to remote (don't force, only update new commits)
     - git push --tags -u github $CI_COMMIT_BRANCH:$CI_COMMIT_BRANCH
   only:
-    - master
+    - main
   when: manual
   tags:
     - quarto-templates
