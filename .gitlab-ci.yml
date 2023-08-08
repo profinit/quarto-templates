@@ -37,9 +37,6 @@ github:
     entrypoint: [""]
   stage: deploy
   script:
-    # set up variables
-    - git config --global user.name "CI"
-    - git config --global user.email "CI@git.profinit.eu"
     # set up as a on proper branch (not detached)
     - git checkout $MAIN_BRANCH || git checkout -b $MAIN_BRANCH
     # set github remote and fetch

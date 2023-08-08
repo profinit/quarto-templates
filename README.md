@@ -2,6 +2,10 @@
 
 Tento projekt je implementace Profinitích šablon pro Quarto.
 
+Důležité odkazy:
+
+- Interní repozitář Profinitu: https://git.profinit.eu/datascience/sablony/quarto-templates. Zde je projekt vyvíjen.
+- Veřejný GitHub repozitář: https://github.com/profinit/quarto-templates. Slouží pouze pro distribuci. Aktualizován per-release.
 - Dokumentace: http://vm-dtsc:31270/ (nutné být na vpn gr501).
 
 ## Prerekvizity
@@ -23,15 +27,7 @@ Uvažujme, že máme nějaký soubor `file.qmd`, který pomocí Quarto chceme vy
 
 Pak před instalací nejprve musíme jít do adresáře, kde tento soubor je.
 
-### Linux
-
 ```sh
-cd /path/to/file/qmd/directory
-```
-
-### Windows (Powershell)
-
-```powershell
 cd /path/to/file/qmd/directory
 ```
 
