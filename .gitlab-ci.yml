@@ -20,12 +20,9 @@ docs-vm-local:
           docker container rm ${DOCS_CONTAINER_NAME}
       fi
     - docker container run -d -p ${DOCS_PORT}:5000 --name "${DOCS_CONTAINER_NAME}" ${DOCS_IMAGE_NAME} quarto preview . --host 0.0.0.0 --port 5000 --render all
-  rules:
-    - if: '$CI_COMMIT_TAG'
-      when: always
-    - if: '$CI_COMMIT_REF_NAME == "master"'
-      when: manual
-    - when: never
+  only:
+    - master
+  when: manual
   tags:
     - shell
 
@@ -39,24 +36,16 @@ github:
     # set up variables
     - git config --global user.name "CI"
     - git config --global user.email "CI@git.profinit.eu"
-
     # set up as a on proper branch (not detached)
-    - git checkout $CI_COMMIT_REF_NAME || git checkout -b $CI_COMMIT_REF_NAME
-
+    - git checkout $CI_COMMIT_BRANCH || git checkout -b $CI_COMMIT_BRANCH
     # set github remote and fetch
     - git remote add github https://${GITHUB_ACCESS_TOKEN}@github.com/profinit/quarto-templates
     - git fetch --all
-
-    # check out branch
-    - git push -u github $CI_COMMIT_REF_NAME:$CI_COMMIT_REF_NAME
-
-    # push to remote
-    - git push --force --tags -u github $CI_COMMIT_REF_NAME:$CI_COMMIT_REF_NAME
-  rules:
-    - if: '$CI_COMMIT_TAG'
-      when: always
-    - if: '$CI_COMMIT_REF_NAME == "master"'
-      when: manual
-    - when: never
+    - git reset --hard origin/$CI_COMMIT_BRANCH  # update to the last commit of the branch
+    # push to remote (don't force, only update new commits)
+    - git push --tags -u github $CI_COMMIT_BRANCH:$CI_COMMIT_BRANCH
+  only:
+    - master
+  when: manual
   tags:
     - quarto-templates
