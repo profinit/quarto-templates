@@ -30,6 +30,8 @@ website:
               file: users/examples/example.qmd
             - text: Python
               file: users/examples/example_py.qmd
+            - text: Python (Jupyter)
+              file: users/examples/example_py_jupyter.ipynb
             - text: R
               file: users/examples/example_r.qmd
     - id: developers
