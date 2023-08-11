@@ -24,7 +24,7 @@ docs-vm-local:
   rules:
     - if: '$CI_COMMIT_TAG'
       when: always
-    - if: '$CI_COMMIT_REF_NAME == "main"'
+    - if: '$CI_COMMIT_REF_NAME == "${MAIN_BRANCH}"'
       when: manual
     - when: never
   tags:
@@ -48,7 +48,7 @@ github:
   rules:
     - if: '$CI_COMMIT_TAG'
       when: always
-    - if: '$CI_COMMIT_REF_NAME == "main"'
+    - if: '$CI_COMMIT_REF_NAME == "${MAIN_BRANCH}"'
       when: manual
     - when: never
   tags:
