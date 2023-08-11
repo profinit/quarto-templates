@@ -16,7 +16,7 @@ docs-vm-local:
     - docker image build . -t "${DOCS_IMAGE_NAME}" -f ".docker/docs.dockerfile"
     - |
       # Stop and remove the container if it is running
-      if [ $(docker container ls -q -f name="${DOCS_CONTAINER_NAME}") ]; then
+      if [ $(docker container ls -a -q -f name="${DOCS_CONTAINER_NAME}") ]; then
           docker container stop ${DOCS_CONTAINER_NAME}
           docker container rm ${DOCS_CONTAINER_NAME}
       fi
