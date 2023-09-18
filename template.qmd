@@ -1,0 +1,51 @@
+---
+title: Ukázka
+author: Jan Novák
+date: last-modified
+format:
+  profinit-html:
+    toc: true
+  profinit-pdf:
+    toc: true
+    lot: true
+    lof: true
+  profinit-revealjs:
+    incremental: true
+    output-file: template_revealjs.html
+---
+
+
+## Úvod
+
+Quarto nám umožňuje spojit obsah a kód do jednoho dokumentu. Více o Quarto lze nalézt zde <https://quarto.org/>.
+
+## Matematika
+$$\int_{a}^{b} x^2 \,dx$$
+
+## Obrázky
+
+![Příklad obrázku](https://imgs.xkcd.com/comics/judgment_day_2x.png)
+
+## Tabulky
+
+| Default | Left | Right | Center |
+|---------|:-----|------:|:------:|
+| 12      | 12   |    12 |   12   |
+| 123     | 123  |   123 |  123   |
+| 1       | 1    |     1 |   1    |
+: První tabulka {#tbl-first .corporate-table}
+
+## Kód
+
+Následujícím způsobem můžeme napsat kódový blok.
+
+```{.python}
+def useless_sqrt_function(n):
+  return n**(1/2)
+```
+
+## Formátování
+
+Je tady možnost **zvýraznit** to, co je *považováno* za ***důležité***. Taky je možné přidávat [klikatelné odkazy](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
+
+
