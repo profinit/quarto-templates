@@ -21,7 +21,7 @@ V Pythonu chceme mít nainstalované následující balíčky:
 
 ## Instalace
 
-Uvažujme, že máme nějaký soubor `file.qmd`, který pomocí Quarto chceme vyrenderovat.
+Uvažujme, že máme nějaký soubor `file.qmd`, který pomocí Quarto chceme s novými šablonami vyrenderovat.
 
 Pak před instalací nejprve musíme jít do adresáře, kde tento soubor je.
 

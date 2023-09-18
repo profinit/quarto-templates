@@ -4,32 +4,8 @@ stages:
 variables:
   GIT_STRATEGY: clone  # always clone fresh
   GIT_DEPTH: 0  # clone with all comits
-  DOCS_IMAGE_NAME: "quarto-templates-docs-prod"
-  DOCS_CONTAINER_NAME: "quarto-templates-docs-prod"
-  DOCS_PORT: 31270
   MAIN_BRANCH: main
   QUARTO_VERSION: 1.3.433
-
-
-docs-vm-local:
-  stage: deploy
-  script:
-    - docker image build . -t "${DOCS_IMAGE_NAME}" -f ".docker/docs.dockerfile"
-    - |
-      # Stop and remove the container if it is running
-      if [ $(docker container ls -a -q -f name="${DOCS_CONTAINER_NAME}") ]; then
-          docker container stop ${DOCS_CONTAINER_NAME}
-          docker container rm ${DOCS_CONTAINER_NAME}
-      fi
-    - docker container run -d -p ${DOCS_PORT}:5000 --name "${DOCS_CONTAINER_NAME}" ${DOCS_IMAGE_NAME} quarto preview . --host 0.0.0.0 --port 5000 --render all
-  rules:
-    - if: '$CI_COMMIT_TAG'
-      when: always
-    - if: '$CI_COMMIT_REF_NAME == "main"'
-      when: manual
-    - when: never
-  tags:
-    - shell
 
 pages:
   stage: deploy

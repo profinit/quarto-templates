@@ -5,8 +5,8 @@ Tento projekt je implementace Profinitích šablon pro Quarto.
 Důležité odkazy:
 
 - Interní repozitář Profinitu: https://git.profinit.eu/datascience/sablony/quarto-templates. Zde je projekt vyvíjen.
-- Veřejný GitHub repozitář: https://github.com/profinit/quarto-templates. Slouží pouze pro distribuci. Aktualizován per-release.
-- Dokumentace: http://vm-dtsc:31270/ (nutné být na vpn gr501).
+- Veřejný GitHub repozitář: https://github.com/profinit/quarto-templates. **Slouží pouze pro distribuci, ne pro vývoj!** Aktualizován per-release.
+- Dokumentace: https://datascience.profinitservices.cz/sablony/quarto-templates/.
 
 ## Prerekvizity
 
@@ -21,19 +21,24 @@ V Pythonu chceme mít nainstalované následující balíčky:
 - `jupyter`: nutné pro generování reportů.
 - (Doporučené) `tabulate`: doporučené, pro lepší práci s tabulkami.
 
-### Rychlé vyzkoušení
+## Rychlé vyzkoušení
 
-Šablonu lze rychle vyzkoušet na předpřipraveném souboru následovně.
+Následujícím postupem můžeme velmi rychle Profinití šablonu zkusit na předpřipraveném souboru.
 
 ```sh
 quarto use template profinit/quarto-templates
 ```
 
+Toto nainstaluje všechny potřebné soubory buď do současného adresáře nebo do zvoleného subadresáře. Dojde mimo jiné ke stažení `template.qmd`, na kterém si šablony můžeme jednoduše vyzkoušet. 
 
+```sh
+cd /path/to/dir/with/template/qmd
+quarto render template.qmd --to profinit-html
+```
 
 ## Instalace
 
-Uvažujme, že máme nějaký soubor `file.qmd`, který pomocí Quarto chceme vyrenderovat.
+Uvažujme, že máme nějaký soubor `template.qmd`, který pomocí Quarto chceme vyrenderovat. Nyní již můžeme chtít
 
 Pak před instalací nejprve musíme jít do adresáře, kde tento soubor je.
 
@@ -51,24 +56,24 @@ Tento příkaz přidá složku `_extensions` do pracovního adresáře.
 
 ## Použití
 
-Nyní jsme v adresáři s `file.qmd`. Při renderování musí být v adresáři, ze kterého spouštíme renderování, nainstalované Profinití Quarto šablony. Teď už použitím následujících příkazů.
+Nyní jsme v adresáři s `template.qmd`. Při renderování musí být v adresáři, ze kterého spouštíme renderování, nainstalované Profinití Quarto šablony. Teď už použitím následujících příkazů.
 
 ### Html
 
 ```bash
-quarto render file.qmd --to profinit-html
+quarto render template.qmd --to profinit-html
 ```
 
 ### Pdf
 
 ```bash
-quarto render file.qmd --to profinit-pdf
+quarto render template.qmd --to profinit-pdf
 ```
 
 ### Revealjs
 
 ```bash
-quarto render file.qmd --to profinit-revealjs
+quarto render template.qmd --to profinit-revealjs
 ```
 
 ### Všechny nakonfigurované formáty
@@ -76,6 +81,6 @@ quarto render file.qmd --to profinit-revealjs
 Také lze použít Quarto pro vyrenderování všech nakonfigurovaných formátů v Quarto hlavičce:
 
 ```sh
-quarto render file.qmd
+quarto render template.qmd
 ```
 
