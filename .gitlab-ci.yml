@@ -57,7 +57,7 @@ pages:
   tags:
     - quarto-templates
   only:
-    - $MAIN_BRANCH
+    - main
 
 
 github:
