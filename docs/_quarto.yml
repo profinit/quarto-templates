@@ -48,3 +48,4 @@ format:
     toc: true
     title-block-banner: false
     lang: cs
+    css: style.css
