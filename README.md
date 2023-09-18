@@ -21,6 +21,16 @@ V Pythonu chceme mít nainstalované následující balíčky:
 - `jupyter`: nutné pro generování reportů.
 - (Doporučené) `tabulate`: doporučené, pro lepší práci s tabulkami.
 
+### Rychlé vyzkoušení
+
+Šablonu lze rychle vyzkoušet na předpřipraveném souboru následovně.
+
+```sh
+quarto use template profinit/quarto-templates
+```
+
+
+
 ## Instalace
 
 Uvažujme, že máme nějaký soubor `file.qmd`, který pomocí Quarto chceme vyrenderovat.
