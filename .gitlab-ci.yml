@@ -31,7 +31,7 @@ docs-vm-local:
   tags:
     - shell
 
-docs:
+pages:
   stage: deploy
   image: python:3.10.10-slim
   before_script:
