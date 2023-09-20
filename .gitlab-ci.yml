@@ -57,8 +57,7 @@ pages:
   tags:
     - quarto-templates
   only:
-    - main
-
+    - tags
 
 github:
   image:
@@ -74,11 +73,7 @@ github:
     - git reset --hard origin/$MAIN_BRANCH  # update to the last commit of the branch
     # push to remote (don't force, only update new commits)
     - git push --tags -u github $MAIN_BRANCH:$MAIN_BRANCH
-  rules:
-    - if: '$CI_COMMIT_TAG'
-      when: always
-    - if: '$CI_COMMIT_REF_NAME == "main"'
-      when: manual
-    - when: never
   tags:
     - quarto-templates
+  only:
+    - tags
