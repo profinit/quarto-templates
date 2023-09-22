@@ -21,4 +21,6 @@ contributes:
       logo: logo.svg
       css: brackets_logo_revealjs.css
       csl: iso690-numeric-brackets-cs.csl
-
+    docx:
+      reference-doc: custom-reference-doc.docx
+      csl: iso690-numeric-brackets-cs.csl

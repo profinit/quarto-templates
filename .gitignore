@@ -9,6 +9,7 @@
 *.toc
 *.aux
 *.log
+*.docx
 
 # Auxiliary folders used by quarto, python, R,...
 .ipynb_checkpoints
