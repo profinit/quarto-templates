@@ -21,6 +21,9 @@ format:
   profinit-revealjs:
     incremental: true
     output-file: example_py_revealjs.html
+  profinit-docx:
+    toc: true
+    shift-heading-level-by: -1
 ---
 
 

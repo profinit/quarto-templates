@@ -26,6 +26,9 @@ format:
     df-print: kable
     code-fold: true
     output-file: example_r_revealjs.html
+  profinit-docx:
+    toc: true
+    shift-heading-level-by: -1
 
 ---
 

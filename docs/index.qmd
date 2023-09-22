@@ -12,7 +12,8 @@ Tento projekt implementuje Profinití stylování pro Quarto dokumenty.
 
 - html,
 - pdf,
-- revealjs (html prezentace).
+- revealjs (html prezentace),
+- docx (word).
 
 Tato dokumentace primárně to, jak:
 
