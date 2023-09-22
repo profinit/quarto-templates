@@ -1,24 +1,26 @@
 /*-- scss:defaults --*/
 
 
-$profinit_red: #bd3632;
-$profinit_grey: #616365;
+$profinit_red: #E63C41;
+$profinit_blue: #465A9B;
+$profinit_grey: #282828;
 
-$table_grey_darker: #c2c5c7;
-$table_grey_lighter: #e3e5ea;
+$table_blue_darker: #DADEEB;
+$table_blue_lighter: #ECEEF5;
 $table_border: 2px;
 
-$link-color: $profinit_red;
-$primary: $profinit_red !default;
+$link-color: $profinit_blue;
+$primary: $profinit_blue !default;
 
 /*-- scss:rules --*/
 
 h1, h2, h3, h4, p.subtitle {
-  color: $profinit_red;  
+  color: $profinit_blue;
+  font-weight: 700;
 }
 
 h4 em {
-  color: $profinit_red;    
+  color: $profinit_blue;
   font-style: normal;
 }
 
@@ -27,23 +29,24 @@ body {
 }
 
 strong {
-  color: $profinit_red;
+  color: $profinit_blue;
 }
 
 .corporate-table table {
-    width: 100%;
-    border-collapse: collapse;
-    border: $table_border solid white;
+  width: 100%;
+  border-collapse: collapse;
+  border: $table_border solid white;
 }
+
 .corporate-table thead {
-    background-color: $profinit_red;
-    color: white;
+  background-color: $profinit_blue;
+  color: white;
 }
 
 .corporate-table tbody tr:nth-child(odd) {
-    background-color: $table_grey_darker;
+  background-color: $table_blue_darker;
 }
 
 .corporate-table tbody tr:nth-child(even) {
-    background-color: $table_grey_lighter;
+  background-color: $table_blue_lighter;
 }

@@ -7,20 +7,33 @@
 %\usepackage{titlesec}
 %\usepackage{babel}[czech]
 
-\definecolor{profinit_red}{HTML}{BD3632}
-\definecolor{profinit_grey}{HTML}{616365}
-\definecolor{table_grey_darker}{HTML}{C2C5C7}
-\definecolor{table_grey_lighter}{HTML}{E3E5EA}
+\definecolor{profinitRed}{HTML}{E63C41}
+\definecolor{profinitGrey}{HTML}{282828}
+\definecolor{profinitBlue}{HTML}{465A9B}
+\definecolor{tableGreyDarker}{HTML}{D7D7D7}
+\definecolor{tableGreyLighter}{HTML}{F5F5F5}
 
 \fancyhf{} % sets both header and footer to nothing
 \renewcommand{\headrulewidth}{0pt}
 
 \date{\today{dd. mm. yyyy}}
 
-
 %% style the chapter/section fonts
-\allsectionsfont{\color{profinit_red}}
-\chapterfont{\color{profinit_red}\fontsize{20}{16.8}\selectfont}
-\sectionfont{\color{profinit_red}\fontsize{20}{16.8}\selectfont}
-\subsectionfont{\color{profinit_red}\fontsize{14}{16.8}\selectfont}
+\allsectionsfont{\color{profinitBlue}}
+\chapterfont{\color{profinitBlue}\fontsize{20}{16.8}\selectfont}
+\sectionfont{\color{profinitBlue}\fontsize{20}{16.8}\selectfont}
+\subsectionfont{\color{profinitBlue}\fontsize{14}{16.8}\selectfont}
 
+
+%% style with Arial font
+%\setmainfont{Arial}
+%\newfontfamily\arialfont{Arial}
+
+%\makeatletter
+%\renewcommand{\title}[1]{\gdef\@title{\arialfont#1}}
+%\makeatother
+
+%\allsectionsfont{\arialfont\color{profinitBlue}}
+%\chapterfont{\arialfont\color{profinitBlue}\fontsize{20}{16.8}\selectfont}
+%\sectionfont{\arialfont\color{profinitBlue}\fontsize{20}{16.8}\selectfont}
+%\subsectionfont{\arialfont\color{profinitBlue}\fontsize{14}{16.8}\selectfont}
