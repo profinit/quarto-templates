@@ -3,9 +3,13 @@
 \usepackage{xcolor}
 \usepackage{eso-pic}
 \usepackage{sectsty}
-\usepackage{fontspec}
+%\usepackage{fontspec} # nelze pouzit s engine pdflatex
 %\usepackage{titlesec}
 %\usepackage{babel}[czech]
+
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault}
 
 \definecolor{profinitRed}{HTML}{E63C41}
 \definecolor{profinitGrey}{HTML}{282828}
