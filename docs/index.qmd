@@ -1,6 +1,5 @@
 ---
 title: "Welcome to Quarto Templates"
-subtitle: making Profinit for `0` years
 format:
     profinit-html:
         toc: false
