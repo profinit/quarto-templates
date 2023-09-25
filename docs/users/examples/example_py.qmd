@@ -1,5 +1,5 @@
 ---
-title: Příklad (Python)
+title: Example (Python)
 execute:
   echo: true
 author: Jan Novák
@@ -26,14 +26,11 @@ format:
     shift-heading-level-by: -1
 ---
 
+## Introduction
 
+Documentation for Quarto can be found at <https://quarto.org>.
 
-
-## Úvod
-
-Dokumentace ku Quarto lze nalézt na <https://quarto.org>.
-
-## Spirála
+## Spiral
 
 ```{python}
 #| warning: false
@@ -64,14 +61,14 @@ plt.show()
 
 ```
 
-## Ptáci
+## Birds
 
 ::: {#fig-birds layout-ncol=2}
-![Havran](rook.jpg){#fig-rook}
+![Rook](rook.jpg){#fig-rook}
 
-![Krkavec](raven.jpg){#fig-raven}
+![Raven](raven.jpg){#fig-raven}
 
-Rozdíl mezi ptáky
+Difference between the birds
 :::
 
 ## Titanic
@@ -98,8 +95,8 @@ Markdown(
 ```
 
 
-Pomocí @fig-spiral-plot se lze prokliknout na Spirálu.
+Using @fig-spiral-plot you can click through to the Spiral.
 
-Na obrázku @fig-birds můžeme vidět rozdíl mezi @fig-raven a @fig-rook.
+In the picture @fig-birds, we can see the difference between @fig-raven and @fig-rook.
 
-Odkaz na tabulku @tbl-titanic.
+Link to the table @tbl-titanic.

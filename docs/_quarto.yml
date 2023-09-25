@@ -19,23 +19,21 @@ website:
       - sidebar:developers
   sidebar: 
     - id: users
-      title: Pro uživatele
+      title: For Users
       style: docked
       contents: 
         - users/quickstart.qmd
         - users/tricks.qmd
         - section: users/examples/index.qmd
           contents: 
-            - text: Bez kódu
+            - text: No Code
               file: users/examples/example.qmd
             - text: Python
               file: users/examples/example_py.qmd
-            - text: Python (Jupyter)
-              file: users/examples/example_py_jupyter.ipynb
             - text: R
               file: users/examples/example_r.qmd
     - id: developers
-      title: Pro vývojáře
+      title: For Developers
       style: docked
       contents:
         - developers/install.qmd
@@ -47,5 +45,5 @@ format:
   profinit-html:
     toc: true
     title-block-banner: false
-    lang: cs
+    lang: en
     css: style.css

@@ -1,13 +1,13 @@
 ---
-title: "Instalace projektu"
+title: "Project Installation"
 format:
     profinit-html:
         number-sections: true
 ---
 
-V tomto dokumentu popíšeme, jak nainstalovat tento projekt z vývojářského úhlu pohledu. Budeme instalovat tedy všechny závislosti a programy, které jsou na vývoj potřeba.
+In this document, we describe how to install this project from a developer's perspective. Thus, we will install all dependencies and programs necessary for development.
 
-## Naklonování projektu
+## Cloning the Project
 
 ::: {.panel-tabset}
 
@@ -37,15 +37,15 @@ git clone -c core.symlinks=true git@git.profinit.eu:datascience/sablony/quarto-t
 
 :::
 
-## Instalace Quarto
+## Installing Quarto
 
-Instalace Quarto je popsána [v dokumentaci Quarto](https://quarto.org/).
+Quarto installation is described in the [Quarto Documentation](https://quarto.org/).
 
-## Instalace Pythonu
+## Installing Python
 
-Pro spuštění Quarto dokumentů s kódovými buňkami psanými v Pythonu je nutné nainstalovat Python. Vhodné instalační skripty lze nalézt [zde](https://www.python.org/downloads/). Doporučujeme Python verze alespoň 3.10, ale bude pravděpodobně fungovat i s nižšími.
+To run Quarto documents with code cells written in Python, it's necessary to install Python. Suitable installation scripts can be found [here](https://www.python.org/downloads/). We recommend Python version at least 3.10, but it will probably work with lower versions as well.
 
-Poté vytvoříme a aktivujeme virtuální prostředí následujícími příkazy:
+Then we create and activate a virtual environment using the following commands:
 
 ::: {.panel-tabset}
 
@@ -67,19 +67,19 @@ python -m pip install -r "requirements.txt"
 
 :::
 
-## Instalace R
+## Installing R
 
 TODO
 
-## Kontrola instalace
+## Checking the Installation
 
-Po instalaci všech nutných komponent doporučujeme spustit následující příkaz pro kontrolu, že instalace proběhla v pořádku:
+After installing all necessary components, we recommend running the following command to check that the installation went well:
 
 ```{.sh}
 quarto check
 ```
 
-Tento příkaz by měl vrátit přibližně následující výstup:
+This command should return approximately the following output:
 
 ```
 [✓] Checking versions of quarto binary dependencies...
@@ -112,4 +112,4 @@ Tento příkaz by měl vrátit přibližně následující výstup:
 [✓] Checking Knitr engine render......OK
 ```
 
-Pokud nějaká část selhala, je nutné opravit její instalaci.
+If any part failed, it is necessary to fix its installation.

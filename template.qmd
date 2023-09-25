@@ -1,5 +1,5 @@
 ---
-title: Ukázka
+title: Demonstration
 author: Jan Novák
 date: last-modified
 format:
@@ -17,37 +17,35 @@ format:
     shift-heading-level-by: -1
 ---
 
-## Úvod
+## Introduction
 
-Quarto nám umožňuje spojit obsah a kód do jednoho dokumentu. Více o Quarto lze nalézt zde <https://quarto.org/>.
+Quarto allows us to combine content and code into one document. More about Quarto can be found here <https://quarto.org/>.
 
-## Matematika
+## Mathematics
 $$\int_{a}^{b} x^2 \,dx$$
 
-## Obrázky
+## Images
 
-![Příklad obrázku](https://imgs.xkcd.com/comics/judgment_day_2x.png)
+![Example image](https://imgs.xkcd.com/comics/judgment_day_2x.png)
 
-## Tabulky
+## Tables
 
 | Default | Left | Right | Center |
 |---------|:-----|------:|:------:|
 | 12      | 12   |    12 |   12   |
 | 123     | 123  |   123 |  123   |
 | 1       | 1    |     1 |   1    |
-: První tabulka {#tbl-first .corporate-table}
+: First table {#tbl-first .corporate-table}
 
-## Kód
+## Code
 
-Následujícím způsobem můžeme napsat kódový blok.
+In the following way, we can write a code block.
 
 ```{.python}
 def useless_sqrt_function(n):
   return n**(1/2)
 ```
 
-## Formátování
+## Formatting
 
-Je tady možnost **zvýraznit** to, co je *považováno* za ***důležité***. Taky je možné přidávat [klikatelné odkazy](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
-
-
+Here is the option to **highlight** what is *considered* to be ***important***. It is also possible to add [clickable links](https://www.youtube.com/watch?v=dQw4w9WgXcQ).

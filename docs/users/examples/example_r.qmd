@@ -1,5 +1,5 @@
 ---
-title: Příklad (R)
+title: Example (R)
 execute:
   echo: true
 author: Jan Novák
@@ -34,7 +34,7 @@ format:
 
 ## R
 
-Ukázka kódu v R:
+Code sample in R:
 
 ```{r}
 
@@ -42,7 +42,7 @@ print(Sys.time())
 
 ```
 
-## Další ukázka kódu v R
+## Another code sample in R
 
 ```{r}
 #| label: fig-time_series
@@ -82,19 +82,19 @@ ggplot(data, aes(x=day)) +
 
 ```
 
-## Ptáci
+## Birds
 
 ::: {#fig-birds layout-ncol=2}
-![Havran](rook.jpg){#fig-rook}
+![Rook](rook.jpg){#fig-rook}
 
-![Krkavec](raven.jpg){#fig-raven}
+![Raven](raven.jpg){#fig-raven}
 
-Rozdíl mezi ptáky
+Difference between birds
 :::
 
-## Tabulka v R
+## Table in R
 
-Pro pěkné tabulky přidejte `df-print: kable` do profinit-html formátu v hlavičce.
+For beautiful tables add `df-print: kable` to the profinit-html format in the header.
 
 ```{r}
 #| label: tbl-titanic
@@ -104,4 +104,4 @@ data = read.csv(file="titanic.csv")
 head(data)
 ```
 
-Viz @fig-time_series nebo @tbl-titanic.
+See @fig-time_series or @tbl-titanic.

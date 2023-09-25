@@ -26,3 +26,4 @@ template_py_files
 docs/_site
 docs/site_libs
 site_libs
+**/*_files/
