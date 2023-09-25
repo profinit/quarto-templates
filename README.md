@@ -1,62 +1,62 @@
 # Quarto Templates
 
-Tento projekt je implementace Profinitích šablon pro Quarto.
+This project is an implementation of Profinit templates for Quarto.
 
-Důležité odkazy:
+Important links:
 
-- Interní repozitář Profinitu: https://git.profinit.eu/datascience/sablony/quarto-templates. Zde je projekt vyvíjen.
-- Veřejný GitHub repozitář: https://github.com/profinit/quarto-templates. **Slouží pouze pro distribuci, ne pro vývoj!** Aktualizován per-release.
-- Dokumentace: https://datascience.profinitservices.cz/sablony/quarto-templates/.
+- Profinit internal repository: https://git.profinit.eu/datascience/sablony/quarto-templates. This is where the project is developed.
+- Public GitHub repository: https://github.com/profinit/quarto-templates. **Only for distribution, not for development!** Updated per-release.
+- Documentation: https://datascience.profinitservices.cz/sablony/quarto-templates/.
 
-## Prerekvizity
+## Prerequisites
 
 - Quarto.
-- (Volitelné) Python: potřeba pouze v případě, že používám pro kódové bloky Pythonu. Pokud nechceme používat defaultní instalaci, měli bychom mít aktivovaný náš Python.
-- (Volitelné) R: potřeba pouze v případě, že používáme kódové bloky R.
+- (Optional) Python: only needed if we are using Python for code blocks. If we do not want to use the default installation, we should have our Python activated.
+- (Optional) R: only needed if we are using R code blocks.
 
-### Python: Balíčky
+### Python: Packages
 
-V Pythonu chceme mít nainstalované následující balíčky:
+In Python, we want to have the following packages installed:
 
-- `jupyter`: nutné pro generování reportů.
-- (Doporučené) `tabulate`: doporučené, pro lepší práci s tabulkami.
+- `jupyter`: necessary for generating reports.
+- (Recommended) `tabulate`: recommended for better handling of tables.
 
-## Rychlé vyzkoušení
+## Quick Tryout
 
-Následujícím postupem můžeme velmi rychle Profinití šablonu zkusit na předpřipraveném souboru.
+With the following procedure, we can very quickly try the Profinit template on a pre-prepared file.
 
 ```sh
 quarto use template profinit/quarto-templates
 ```
 
-Toto nainstaluje všechny potřebné soubory buď do současného adresáře nebo do zvoleného subadresáře. Dojde mimo jiné ke stažení `template.qmd`, na kterém si šablony můžeme jednoduše vyzkoušet. 
+This will install all necessary files either in the current directory or in a chosen subdirectory. Among other things, `template.qmd` will be downloaded, on which we can easily try the templates.
 
 ```sh
 cd /path/to/dir/with/template/qmd
 quarto render template.qmd --to profinit-html
 ```
 
-## Instalace
+## Installation
 
-Uvažujme, že máme nějaký soubor `template.qmd`, který pomocí Quarto chceme vyrenderovat. Nyní již můžeme chtít
+Suppose we have some `template.qmd` file that we want to render using Quarto. Now we may want
 
-Pak před instalací nejprve musíme jít do adresáře, kde tento soubor je.
+Before installing, we must first go to the directory where this file is.
 
 ```sh
 cd /path/to/file/qmd/directory
 ```
 
-Nyní do tohoto adresáře nainstalujeme Profinití Quarto šablony.
+Now into this directory, we will install the Profinit Quarto templates.
 
 ```bash
 quarto add profinit/quarto-templates
 ```
 
-Tento příkaz přidá složku `_extensions` do pracovního adresáře.
+This command will add the `_extensions` folder to the working directory.
 
-## Použití
+## Usage
 
-Nyní jsme v adresáři s `template.qmd`. Při renderování musí být v adresáři, ze kterého spouštíme renderování, nainstalované Profinití Quarto šablony. Teď už použitím následujících příkazů.
+Now we are in the directory with `template.qmd`. When rendering, the directory from which we are running the rendering must have the Profinit Quarto templates installed. Now using the following commands.
 
 ### Html
 
@@ -76,11 +76,18 @@ quarto render template.qmd --to profinit-pdf
 quarto render template.qmd --to profinit-revealjs
 ```
 
-### Všechny nakonfigurované formáty
+### Docx
 
-Také lze použít Quarto pro vyrenderování všech nakonfigurovaných formátů v Quarto hlavičce:
+```bash
+quarto render template.qmd --to profinit-docx
+```
+
+### All Configured Formats
+
+Quarto can also be used to render all configured formats in the Quarto header:
 
 ```sh
 quarto render template.qmd
 ```
 
+Note that this can sometimes cause errors due to format conflicts (like with `docx` and `pdf` both configured).

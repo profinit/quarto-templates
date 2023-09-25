@@ -2,10 +2,10 @@
 title: Release
 ---
 
-1. Inkremementuju verzi (atribut `version`) v souboru  `_extensions/profinit/_extension.yml`.
-2. V gitlabu v záložce `Deploy > Releases` vytvořím nový release. V něm nastavím:
-    - Jméno na verzi, která je v atributu `version` ve výše zmíněném souboru.
-    - Tag na verzi, která je v atributu `version`.
-    - Vyplním release notes. V nich vyzdvihnu, co se změnilo od minulé verze.
+1. Increment the version (attribute `version`) in the file `_extensions/profinit/_extension.yml`.
+2. In GitLab, under the tab `Deploy > Releases`, create a new release. In it, set:
+    - Name to the version that is in the attribute `version` in the aforementioned file.
+    - Tag to the version that is in the attribute `version`.
+    - Fill in the release notes. Highlight what has changed since the previous version.
 
-Po vytvoření releasu se automaticky spustí deploy dokumentace na naši vm a nové verze na github.
+Upon creating the release, the documentation deployment and the new versions on GitHub are triggered automatically.

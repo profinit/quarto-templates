@@ -1,30 +1,30 @@
 ---
-title: "Jak začít"
+title: "Quick Start"
 format:
     profinit-html:
         number-sections: true
         number-depth: 2
 ---
 
-## Prerekvizity
+## Prerequisites
 
 - Quarto.
-- (Volitelné) Python: potřeba pouze v případě, že používám pro kódové bloky Pythonu. Pokud nechceme používat defaultní instalaci, měli bychom mít aktivovaný náš Python.
-- (Volitelné) R: potřeba pouze v případě, že používáme kódové bloky R.
-- (Volitelné) Tex: při exportu do pdf potřebujeme mít nainstalovaný Tex. To lze udělat následujícím příkazem: `quarto install tinytex`.
+- (Optional) Python: only needed if we are using Python code blocks. If we don't want to use the default installation, we should have our Python activated.
+- (Optional) R: only needed if we are using R code blocks.
+- (Optional) Tex: needed when exporting to pdf. After installing Quarto, this can be done with the following command: `quarto install tinytex`.
 
-### Python: Balíčky
+### Python: Packages
 
-V Pythonu chceme mít nainstalované následující balíčky:
+In Python, we want to have the following packages installed:
 
-- `jupyter`: nutné pro generování reportů.
-- (Doporučené) `tabulate`: doporučené, pro lepší práci s tabulkami, viz [Renderování tabulek v Pythonu](tricks.qmd#python-renderování-tabulek).
+- `jupyter`: necessary for generating reports.
+- (Recommended) `tabulate`: recommended for better table handling, see [Rendering Tables in Python](tricks.qmd#python-rendering-tables).
 
-## Instalace
+## Installation
 
-Uvažujme, že máme nějaký soubor `file.qmd`, který pomocí Quarto chceme s novými šablonami vyrenderovat.
+Assume that we have some file `file.qmd`, which we want to render with new templates using Quarto.
 
-Pak před instalací nejprve musíme jít do adresáře, kde tento soubor je.
+Before installation, we first need to go to the directory where this file is located.
 
 ::: {.panel-tabset}
 
@@ -46,11 +46,11 @@ cd /path/to/file/qmd/directory
 quarto add profinit/quarto-templates
 ```
 
-Tento příkaz přidá složku `_extensions` do pracovního adresáře.
+This command will add a `_extensions` folder to the working directory.
 
-## Použití
+## Usage
 
-Nyní jsme v adresáři s `file.qmd`. Teď už použitím následujících příkazů
+Now we are in the directory with `file.qmd`. Now by using the following commands
 
 ::: {.panel-tabset}
 
@@ -72,9 +72,15 @@ quarto render file.qmd --to profinit-pdf
 quarto render file.qmd --to profinit-revealjs
 ```
 
+### Docx
+
+```bash
+quarto render file.qmd --to profinit-docx
+```
+
 :::
 
-Také lze použít Quarto pro vyrenderování všech nakonfigurovaných formátů v Quarto hlavičce:
+We can also use Quarto to render all configured formats in the Quarto header:
 
 ```{.sh}
 quarto render file.qmd
@@ -82,6 +88,12 @@ quarto render file.qmd
 
 ::: {.callout-note}
 
-Při renderování musí být v adresáři, ze kterého spouštíme renderování, nainstalované Profinití Quarto šablony.
+When rendering, the Profinit Quarto templates must be installed in the directory from which we are launching the rendering.
+
+:::
+
+::: {.callout-warning}
+
+The rendering of all configured formats sometimes doesn't work, when `docx` and `pdf` outputs are both configured.
 
 :::

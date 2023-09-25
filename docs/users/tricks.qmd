@@ -1,36 +1,35 @@
 ---
-title: Tipy a triky
+title: Tips and Tricks
 ---
 
-## Vývojové prostředí
+## Development Environment
 
-Jako vývojové prostředí doporučujeme používat:
+We recommend using the following development environments:
 
-- Python: Visual Studio Code. Více informací lze nalézt [zde](https://quarto.org/docs/tools/vscode.html).
-- R: RStudio IDE. Více informací lze nalézt [zde](https://quarto.org/docs/tools/rstudio.html).
+- Python: Visual Studio Code. More information can be found [here](https://quarto.org/docs/tools/vscode.html).
+- R: RStudio IDE. More information can be found [here](https://quarto.org/docs/tools/rstudio.html).
 
-## Duplikátní instalace šablon
+## Duplicate Template Installation
 
-V návodu jsme bylo pro zjednodušení při instalaci uvedeno, že šablony je nutné nainstalovat ke každému `qmd` souboru. Tomuto se však lze vyhnout několika způsoby:
-
+In the guide, it was mentioned for simplification during installation that it is necessary to install the templates to each `qmd` file. However, this can be avoided in several ways.
 
 ### Quarto Project
 
-[Quarto Project](https://quarto.org/docs/projects/quarto-projects.html) nám umožňuje seskupit několik reportů do jednoho projektu. Tyto projekty pak můžeme spolu renderovat a jinak je globálně nastavovat. Šablonu tak lze nainstalovat pouze do root adresáře quarto projektu.
+[Quarto Project](https://quarto.org/docs/projects/quarto-projects.html) allows us to group several reports into one project. These projects can then be rendered together and otherwise globally set. The template can thus be installed only in the root directory of the quarto project.
 
-Příklad adresářové struktury:
+Example directory structure:
 
 ```
 quarto_project/
-    _extensions/  # nainstalovaná profinití šablona sídlí zde
-    _quarto.yml  # konfigurační soubor pro Quarto Project
+    _extensions/  # the installed template resides here
+    _quarto.yml  # configuration file for Quarto Project
     report1.qmd
     report2.qmd
 ```
 
 ### Link
 
-Místo duplikace můžeme do potřebných míst zavést odkaz (symlink) na adresář `_extensions`.
+Instead of duplication, we can introduce a link (symlink) to the required places to the `_extensions` directory.
 
 ::: {.panel-tabset}
 
@@ -42,15 +41,15 @@ ln -s /path/to/original/directory /path/to/symlink
 
 ::::
 
-## Python: Renderování tabulek
+## Python: Rendering Tables
 
-**Doporučujeme před vyrenderováním převést tabulku do Markdownu**. Toto umožní, abychom se na tu tabulku pak v textu referencovali. Toto kromě běžného balíčku `pandas` vyžaduje balíček `tabulate`.
+**We recommend converting the table to Markdown before rendering.** This will allow us to refer to that table in the text later. This requires the `tabulate` package in addition to the regular pandas package.
 
-Například:
+For example:
 
 ```{python}
 #| label: tbl-example
-#| tbl-cap: "Příklad tabulky"
+#| tbl-cap: "Table Example"
 
 import pandas as pd
 import numpy as np
@@ -67,13 +66,13 @@ Markdown(
   )
 ```
 
-Na tuto tabulku se pak můžeme pomocí labelu odkázat následujícím způsobem: @tbl-example.
+You can then refer to this table using the label in the following way: @tbl-example.
 
-## Styly tabulek
+## Table Styles
 
-### Korporátní vzhled
+### Corporate Look
 
-Stačí jí přidat CSS třídu `corporate-table` následujícím způsobem.
+Simply add the CSS class `corporate-table` in the following way.
 
 ::: {.panel-tabset}
 
@@ -85,7 +84,7 @@ Stačí jí přidat CSS třídu `corporate-table` následujícím způsobem.
 |----------|-----|
 | male     | 16  |
 | female   | 15  |
-: Příklad korporátní tabulky v Markdownu {#tbl-corporate-md .corporate-table}
+: Example of a corporate table in Markdown {#tbl-corporate-md .corporate-table}
 ```
 
 #### Python
@@ -93,7 +92,7 @@ Stačí jí přidat CSS třídu `corporate-table` následujícím způsobem.
 ```{.python}
 #| class: corporate-table
 #| label: tbl-corporate-python
-#| tbl-cap: "Příklad korporátní tabulky v Pythonu"
+#| tbl-cap: "Example of a corporate table in Python"
 
 import pandas as pd
 import numpy as np
@@ -116,12 +115,12 @@ TODO
 
 :::
 
-## RevealJS: Příliš dlouhý obsah slajdu
+## RevealJS: Too Long Slide Content
 
-Můžeme vyřešit pomocí možnosti `{.scrollable}`, kterou lze přidat za nadpis.
+This can be resolved using the `{.scrollable}` option, which can be added after the heading.
 
-Například:
+For instance:
 
 ```{.markdown}
-## Tabulky {.scrollable}
+## Tables {.scrollable}
 ```

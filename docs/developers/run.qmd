@@ -1,25 +1,25 @@
 ---
-title: Spuštění
+title: Run
 ---
 
-## Template soubor
+## Template File
 
-V rootu našeho repozitáře se nachází soubor `template.qmd`. Ten můžeme využít pro pozorování během vývoje, jak se upravená funkcionalita v šablonách projevuje.
+In the root of our repository, there is a file `template.qmd`. This can be utilized to observe how the altered functionality in the templates manifests during development.
 
-Abychom toto pravidelně viděli, můžeme využít příkaz `preview` na jeho zobrazení.
+To regularly see this, we can use the `preview` command to display it.
 
 ```{.sh}
 quarto preview template.qmd
 ```
 
-## Dokumentace
+## Documentation
 
 V tomto projektu můžeme spustit pouze generování dokumentace.
 
 ```{.sh}
-source venv/bin/activate  # Aktivace nainstalovaného prostředí pro vyrenderování dokumentace.
+source venv/bin/activate  # Activation of the installed environment for rendering the documentation.
 cd docs/
 quarto render . --to profinit-html
 ```
 
-Alternativně můžeme použít příkaz `preview` na její zobrazení.
+Alternatively, we can use the `preview` command to display it.

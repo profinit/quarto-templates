@@ -1,5 +1,5 @@
 ---
-title: Příklad (bez kódu)
+title: Example (no code)
 execute:
   echo: true
 author: Jan Novák
@@ -22,12 +22,11 @@ format:
     output-file: example_revealjs.html
 ---
 
+## Introduction
 
-## Úvod
+Quarto allows us to combine content and code into one document. More about Quarto can be found here <https://quarto.org/>.
 
-Quarto nám umožňuje spojit obsah a kód do jednoho dokumentu. Více o Quarto lze nalézt zde <https://quarto.org/>.
-
-## Matematika
+## Mathematics
 $$ \oint_{-\frac{\pi}2}^{\frac{\pi}2} x\cos x\,dx $$
 
 $$x=(x_0, ..., x_{N-1}) \in \mathbb{C}$$
@@ -36,33 +35,34 @@ $$\Downarrow$$
 
 $$x=\frac{1}{\sqrt{N}} \sum_{l-0}^{N-1} x_l \cdot e^{\frac{-2\pi}{N} \cdot i \cdot k \cdot l}$$
 
-## Obrázky
+## Images
 
-![Příklad obrázku](https://imgs.xkcd.com/comics/judgment_day_2x.png)
+![Example image](https://imgs.xkcd.com/comics/judgment_day_2x.png)
 
-## Tabulky
+## Tables
 
 | Default | Left | Right | Center |
 |---------|:-----|------:|:------:|
 | 12      | 12   |    12 |   12   |
 | 123     | 123  |   123 |  123   |
 | 1       | 1    |     1 |   1    |
-: První tabulka {#tbl-first .corporate-table}
+: First table {#tbl-first .corporate-table}
 
-## Kód
+## Code
 
-Následujícím způsobem můžeme napsat kódový blok.
+In the following way, we can write a code block.
 
 ```{.python}
 def useless_sqrt_function(n):
   return n**(1/2)
+
 ```
 
-## Formátování
+## Formatting
 
-Je tady možnost **zvýraznit** to, co je *považováno* za ***důležité***. Taky je možné přidávat [klikatelné odkazy](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
+There is the option to **highlight** what is *considered* ***important***. It is also possible to add [clickable links](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
 
-## Citace
+## Citations
 
-Citace jsou defaultně nastaveny na numerické. Lze je dělat takto [@gitignore].
+Citations are set to numerical by default. They can be done like this [@gitignore].
 
