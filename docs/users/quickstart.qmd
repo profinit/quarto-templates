@@ -11,6 +11,7 @@ format:
 - Quarto.
 - (Volitelné) Python: potřeba pouze v případě, že používám pro kódové bloky Pythonu. Pokud nechceme používat defaultní instalaci, měli bychom mít aktivovaný náš Python.
 - (Volitelné) R: potřeba pouze v případě, že používáme kódové bloky R.
+- (Volitelné) Tex: při exportu do pdf potřebujeme mít nainstalovaný Tex. To lze udělat následujícím příkazem: `quarto install tinytex`.
 
 ### Python: Balíčky
 
