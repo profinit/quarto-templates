@@ -6,10 +6,10 @@
 .reveal::before {
     content: ""; /* Required for the pseudo-element to be generated */
     position: absolute;
-    top: 70%;
+    top: 60%;
     right: 0;
-    width: 15%;
-    height: 15%;
+    width: 30%;
+    height: 30%;
     background-image: url('right_bracket_logo_revealjs.svg');
     background-repeat: no-repeat;
     background-size: contain;
@@ -21,8 +21,8 @@
     position: absolute;
     top: 10%;
     left: 0; /* This will position the second logo at the left side of the screen */
-    width: 10%;
-    height: 10%;
+    width: 20%;
+    height: 20%;
     background-image: url('left_bracket_logo_revealjs.svg');
     background-repeat: no-repeat;
     background-size: contain;
