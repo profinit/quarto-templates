@@ -19,6 +19,7 @@ In Python, we want to have the following packages installed:
 
 - `jupyter`: necessary for generating reports.
 - (Recommended) `tabulate`: recommended for better table handling, see [Rendering Tables in Python](tricks.qmd#python-rendering-tables).
+- (Optional) `itables`: can be used to have interactive tables in some outputs. Check out [Interactive Tables section](tricks.qmd#interactive-tables).
 
 ## Installation
 

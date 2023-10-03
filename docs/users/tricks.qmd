@@ -79,7 +79,6 @@ Simply add the CSS class `corporate-table` in the following way.
 #### Markdown
 
 ```{.markdown}
-
 | sex      | age |
 |----------|-----|
 | male     | 16  |
@@ -87,9 +86,15 @@ Simply add the CSS class `corporate-table` in the following way.
 : Example of a corporate table in Markdown {#tbl-corporate-md .corporate-table}
 ```
 
+| sex      | age |
+|----------|-----|
+| male     | 16  |
+| female   | 15  |
+: Example of a corporate table in Markdown {#tbl-corporate-md .corporate-table}
+
 #### Python
 
-```{.python}
+```{python}
 #| class: corporate-table
 #| label: tbl-corporate-python
 #| tbl-cap: "Example of a corporate table in Python"
@@ -110,6 +115,43 @@ Markdown(
 ```
 
 #### R
+
+TODO
+
+:::
+
+## Interactive Tables
+
+::: {.panel-tabset}
+
+### Python
+
+::: {.callout-warning}
+
+- Interactive tables via `itables` package work only in `html` and `revealjs` outputs.
+- Setting up `label` in Quarto breaks the table. Do not use it.
+- `tbl-cap` doesn't work.
+
+:::
+
+
+```{python}
+import itables
+from itables.sample_dfs import get_countries
+
+# initialize
+itables.init_notebook_mode()
+
+itables.show(get_countries())
+```
+
+::: {.callout-tip}
+
+We can also use with `corporate-table` class.
+
+:::
+
+### R
 
 TODO
 
