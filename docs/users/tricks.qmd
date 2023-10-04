@@ -99,6 +99,8 @@ Simply add the CSS class `corporate-table` in the following way.
 #| label: tbl-corporate-python
 #| tbl-cap: "Example of a corporate table in Python"
 
+#| class: corporate-table
+
 import pandas as pd
 import numpy as np
 from IPython.display import Markdown
