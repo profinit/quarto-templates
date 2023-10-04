@@ -13,6 +13,7 @@ format:
     page-layout: full
     embed-resources: true
     anchor-sections: true
+    code-tools: true
   profinit-pdf:
     toc: true
     lot: true

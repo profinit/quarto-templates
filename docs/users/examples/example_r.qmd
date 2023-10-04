@@ -15,6 +15,7 @@ format:
     anchor-sections: true
     df-print: kable
     code-fold: true
+    code-tools: true
   profinit-pdf:
     toc: true
     lot: true

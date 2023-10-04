@@ -8,7 +8,7 @@ This section is devoted to demonstrating the basic capabilities in Quarto. The e
 - Display images, tables, code.
 - Without an attached language, without Python and R.
 
-By clicking on **Edit this page**, it's possible to view the source code of the qmd file generating this page.
+By clicking on `</> Code > View Source`, it's possible to view the source code of the qmd file generating this page.
 
 ::: {.callout-tip}
 
