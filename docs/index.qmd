@@ -26,3 +26,30 @@ You can also get inspired by this documentation itself!
 [Tips and Tricks](users/tricks.qmd){.btn-secondary .btn .btn-lg role="button"}
 [Examples](users/examples/index.qmd){.btn-secondary .btn .btn-lg role="button"}
 :::
+
+---
+
+**Related Projects**
+
+::: {}
+[👉Profi-Plots](https://datascience.profinitservices.cz/sablony/profi-plots/): Profinit Themes for plotting in `Python`.
+:::
+
+::: {}
+[👉Profigraf](https://datascience.profinitservices.cz/sablony/profitemplates/): Profinit Themes for plotting in `R`.
+:::
+
+**Info**
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: asis
+import yaml
+
+with open("_extensions/profinit/_extension.yml", mode="r", encoding="utf-8") as file:
+    d = yaml.safe_load(file)
+    version = d["version"]
+
+print(f"`Latest version: {version}`")
+```
