@@ -9,25 +9,12 @@ variables:
 
 pages:
   stage: deploy
-  image: python:3.10.10-slim
+  image: python:3.10.10
   before_script:
     # Install system libraries
     - |
       apt-get update && apt-get install -y \
         r-base \
-        libcurl4-openssl-dev \
-        libssl-dev \
-        libxml2-dev \
-        libfontconfig1-dev \
-        libharfbuzz-dev \
-        libfreetype6-dev \
-        libjpeg62-turbo-dev \
-        libpng-dev \
-        libtiff5-dev \
-        libgl1-mesa-dev \
-        pandoc \
-        curl \
-        wget \
         && rm -rf /var/lib/apt/lists/*
     # Install R packages
     - echo 'options(repos = c(REPO_NAME = "https://packagemanager.rstudio.com/all/latest"))' >> /etc/R/Rprofile.site
@@ -54,6 +41,9 @@ pages:
   artifacts:
     paths:
       - public
+  cache:
+    paths:
+      - /usr/local/lib/R/site-library  # R packages
   tags:
     - quarto-templates
   rules:
