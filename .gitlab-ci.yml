@@ -2,8 +2,6 @@ stages:
   - deploy
 
 variables:
-  GIT_STRATEGY: clone  # always clone fresh
-  GIT_DEPTH: 0  # clone with all comits
   MAIN_BRANCH: main
   QUARTO_VERSION: 1.3.433
 
@@ -60,6 +58,9 @@ github:
   image:
     name: alpine/git:2.40.1
     entrypoint: [""]
+  variables:
+    GIT_STRATEGY: clone  # always clone fresh
+    GIT_DEPTH: 0  # clone with all commits
   stage: deploy
   script:
     # set up as a on proper branch (not detached)
