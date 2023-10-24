@@ -1,3 +1,12 @@
-deploy_docs_vm:
-	docker image build . -t "quarto_templates_docs" -f ".docker/docs.dockerfile"
-	systemctl restart quarto_templates_docs
+SHELL := /bin/bash
+PYTHON := python
+R := R
+
+init:
+	sh scripts/init.sh
+
+install_dev:
+	${PYTHON} -m pip install -r "requirements.txt"
+	${R} -e "install.packages(c('dplyr', 'ggplot2', 'rmarkdown'))"
+
+.PHONE: init install_dev
