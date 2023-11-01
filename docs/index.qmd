@@ -32,11 +32,11 @@ You can also get inspired by this documentation itself!
 **Related Projects**
 
 ::: {}
-[👉Profi-Plots](https://datascience.profinitservices.cz/sablony/profi-plots/): Profinit Themes for plotting in `Python`.
+[👉profiplots](https://git.profinit.eu/datascience/sablony/profiplots): Profinit Themes for plotting in `Python`.
 :::
 
 ::: {}
-[👉Profigraf](https://datascience.profinitservices.cz/sablony/profitemplates/): Profinit Themes for plotting in `R`.
+[👉profiplots-r](https://git.profinit.eu/datascience/sablony/profitemplates): Profinit Themes for plotting in `R`.
 :::
 
 **Info**
