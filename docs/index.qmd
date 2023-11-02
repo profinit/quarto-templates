@@ -36,7 +36,7 @@ You can also get inspired by this documentation itself!
 :::
 
 ::: {}
-[👉profiplots-r](https://git.profinit.eu/datascience/sablony/profitemplates): Profinit Themes for plotting in `R`.
+[👉profiplots-r](https://git.profinit.eu/datascience/sablony/profiplots-r): Profinit Themes for plotting in `R`.
 :::
 
 **Info**
