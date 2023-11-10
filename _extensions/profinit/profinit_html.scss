@@ -22,10 +22,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-strong {
-  color: $profinit_blue;
-}
-
 .corporate-table table {
   width: 100%;
   border-collapse: collapse;
@@ -43,4 +39,16 @@ strong {
 
 .corporate-table tbody tr:nth-child(even) {
   background-color: $table_blue_lighter;
+}
+
+.p-red {
+  color: $profinit_red;
+}
+
+.p-blue {
+  color: $profinit_blue;
+}
+
+.p-grey {
+  color: $profinit_grey;
 }
