@@ -10,7 +10,7 @@
     right: 0;
     width: 30%;
     height: 30%;
-    background-image: url('right_bracket_logo_revealjs.svg');
+    background-image: url('../img/revealjs-right-bracket.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
@@ -23,7 +23,7 @@
     left: 0; /* This will position the second logo at the left side of the screen */
     width: 20%;
     height: 20%;
-    background-image: url('left_bracket_logo_revealjs.svg');
+    background-image: url('../img/revealjs-left-bracket.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left;

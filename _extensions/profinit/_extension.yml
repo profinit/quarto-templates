@@ -4,23 +4,30 @@ contributes:
   formats:
     html:
       title-block-banner: transparent
-      theme: [default, profinit_html.scss]
-      css: logo.css
+      theme:
+        - default
+        - theme/light-common.scss
+        - theme/light-html.scss
+      css: 
+        - style/logo.css
       csl: iso690-numeric-brackets-cs.csl
     pdf:
       pdf-engine: pdflatex
-      include-in-header: header.tex
-      include-before-body: logo.tex
+      include-in-header: tex/header.tex
+      include-before-body: tex/logo.tex
       format-resources:
-        - "logo.pdf"
-        - "logo_small.pdf"
+        - img/logo.pdf
+        - img/logo-small.pdf
       csl: iso690-numeric-brackets-cs.csl
       linkcolor: profinitBlue
       urlcolor: profinitBlue
     revealjs:
-      theme: [default, profinit_revealjs.scss]
-      logo: logo.svg
-      css: brackets_logo_revealjs.css
+      theme:
+        - default
+        - theme/light-common.scss
+        - theme/light-revealjs.scss
+      logo: img/logo.svg
+      css: style/revealjs-brackets-logo.css
       csl: iso690-numeric-brackets-cs.csl
     docx:
       reference-doc: custom-reference-doc.docx

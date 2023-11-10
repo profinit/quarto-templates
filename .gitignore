@@ -27,3 +27,8 @@ docs/_site
 docs/site_libs
 site_libs
 **/*_files/
+
+# Override ignore
+!_extensions/profinit/img/*
+!_extensions/profinit/tex/*
+!_extensions/profinit/theme/*
