@@ -5,7 +5,7 @@ ARG USER_NAME
 ARG USER_GID
 ARG USER_GNAME
 
-ARG QUARTO_VERSION=1.3.151
+ARG QUARTO_VERSION=1.3.450
 
 # Install R
 RUN apt-get update && apt-get install -y \
