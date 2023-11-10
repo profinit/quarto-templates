@@ -28,10 +28,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-strong {
-  color: $profinit_blue;
-}
-
 .corporate-table table {
   width: 100%;
   border-collapse: collapse;
@@ -53,4 +49,16 @@ strong {
 
 .reveal .slide-logo {
   max-height: 5rem !important;
+}
+
+.p-red {
+  color: $profinit_red;
+}
+
+.p-blue {
+  color: $profinit_blue;
+}
+
+.p-grey {
+  color: $profinit_grey;
 }
