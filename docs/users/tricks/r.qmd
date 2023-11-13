@@ -1,0 +1,7 @@
+---
+title: Tips and Tricks (R)
+---
+
+## Development Environment
+
+- RStudio IDE. More information can be found [here](https://quarto.org/docs/tools/rstudio.html).

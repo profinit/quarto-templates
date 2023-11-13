@@ -31,6 +31,14 @@ format:
 
 Documentation for Quarto can be found at <https://quarto.org>.
 
+::: {.callout-tip}
+
+- When using Python with Quarto to generate output, it internally first creates a Jupyter notebook with the extension `.ipynb`, which is then run and generated into html. This step can be bypassed and one can write Jupyter directly notebooks, and have them rendered directly.
+- Even though our examples focus on `qmd` files, you can use Quarto to render Jupyter notebook files (`.ipynb`). Check out their [documentation](https://quarto.org/docs/get-started/hello/jupyter.html) for more info.
+
+:::
+
+
 ## Spiral
 
 ```{python}

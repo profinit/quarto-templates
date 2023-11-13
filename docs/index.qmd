@@ -23,7 +23,7 @@ You can also get inspired by this documentation itself!
 
 ::: {.hero-buttons}
 [Quick Start](users/quickstart.qmd){.btn-secondary .btn .btn-lg role="button"}
-[Tips and Tricks](users/tricks.qmd){.btn-secondary .btn .btn-lg role="button"}
+[Tips and Tricks](users/tricks/index.qmd){.btn-secondary .btn .btn-lg role="button"}
 [Examples](users/examples/index.qmd){.btn-secondary .btn .btn-lg role="button"}
 :::
 

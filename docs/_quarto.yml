@@ -8,6 +8,8 @@ website:
   repo-branch: main
   repo-subdir: docs
   repo-actions: [edit]
+  back-to-top-navigation: true
+  page-navigation: true
 
   navbar:
     search: true
@@ -15,15 +17,26 @@ website:
       - icon: git
         url: https://git.profinit.eu/datascience/sablony/quarto-templates
     left:
-      - sidebar:users
-      - sidebar:developers
+      - text: For Users
+        menu:
+          - text: Quick Start
+            href: users/quickstart.qmd
+          - text: Examples
+            href: users/examples/index.qmd
+          - text: Tips and Tricks
+            href: users/tricks/index.qmd
+      - text: For Developers
+        menu:
+        - developers/install.qmd
+        - developers/run.qmd
+        - developers/release.qmd
+
   sidebar: 
     - id: users
       title: For Users
       style: docked
       contents: 
         - users/quickstart.qmd
-        - users/tricks.qmd
         - section: users/examples/index.qmd
           contents: 
             - text: No Code
@@ -32,6 +45,15 @@ website:
               file: users/examples/example_py.qmd
             - text: R
               file: users/examples/example_r.qmd
+        - section: users/tricks/index.qmd
+          contents:
+            - text: General
+              file: users/tricks/general.qmd
+            - text: Python
+              file: users/tricks/python.qmd
+            - text: R
+              file: users/tricks/r.qmd
+
     - id: developers
       title: For Developers
       style: docked
@@ -39,7 +61,7 @@ website:
         - developers/install.qmd
         - developers/run.qmd
         - developers/release.qmd
-    
+
   
 format:
   profinit-html:
@@ -47,3 +69,4 @@ format:
     title-block-banner: false
     lang: en
     css: style.css
+    smooth-scroll: true

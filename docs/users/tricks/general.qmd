@@ -1,0 +1,69 @@
+---
+title: Tips and Tricks (General)
+---
+
+This document contains tips and tricks that are general: not specific for any.
+
+
+## Duplicate Template Installation
+
+In the guide, it was mentioned for simplification during installation that it is necessary to install the templates to each `qmd` file. However, this can be avoided in several ways.
+
+### Quarto Project
+
+[Quarto Project](https://quarto.org/docs/projects/quarto-projects.html) allows us to group several reports into one project. These projects can then be rendered together and otherwise globally set. The template can thus be installed only in the root directory of the quarto project.
+
+Example directory structure:
+
+```
+quarto_project/
+    _extensions/  # the installed template resides here
+    _quarto.yml  # configuration file for Quarto Project
+    report1.qmd
+    report2.qmd
+```
+
+### Link
+
+Instead of duplication, we can introduce a link (symlink) to the required places to the `_extensions` directory.
+
+::: {.panel-tabset}
+
+#### Linux
+
+```sh
+ln -s /path/to/original/directory /path/to/symlink
+```
+
+::::
+
+## Table Styles
+
+### Corporate
+
+Simply add the CSS class `corporate-table` in the following way.
+
+```{.markdown}
+| sex      | age |
+|----------|-----|
+| male     | 16  |
+| female   | 15  |
+: Example of a corporate table in Markdown {#tbl-corporate-md .corporate-table}
+```
+
+| sex      | age |
+|----------|-----|
+| male     | 16  |
+| female   | 15  |
+: Example of a corporate table in Markdown {#tbl-corporate-md .corporate-table}
+
+
+## RevealJS: Too Long Slide Content
+
+This can be resolved using the `{.scrollable}` option, which can be added after the heading.
+
+For instance:
+
+```{.markdown}
+## Tables {.scrollable}
+```

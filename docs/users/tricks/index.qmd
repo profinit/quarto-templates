@@ -1,0 +1,9 @@
+---
+title: Tips and Tricks
+---
+
+This section is devoted to Tips and Tricks.
+
+- [General](general.qmd): general tips appliable when using any language in the code cells or with no code cells.
+- [Python](python.qmd): when using Python with Quarto.
+- [R](r.qmd): when using R with Quarto.

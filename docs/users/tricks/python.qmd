@@ -1,0 +1,90 @@
+---
+title: Tips and Tricks (Python)
+---
+
+## Development Environment
+
+We recommend using the following development environment:
+
+- Visual Studio Code. More information can be found [here](https://quarto.org/docs/tools/vscode.html).
+
+## Rendering Tables
+
+Even though Jupyter enables us to view tables as pure HTML, it is generally better to convert it to Markdown before displaying it. When we convert it to Markdown, Quarto enables us to use additional features, such as referencing the table later or listing it in the list of tables etc. This, however, requires the `tabulate` package in addition to the regular pandas package.
+
+For example:
+
+```{python}
+#| label: tbl-example
+#| tbl-cap: "Table Example"
+
+import pandas as pd
+import numpy as np
+from IPython.display import Markdown
+from tabulate import tabulate
+
+data = pd.DataFrame({"sex": ["male", "female"], "age": [15, 16]})
+Markdown(
+  tabulate(
+    data.head(),
+    headers=list(data.columns),
+    showindex=False
+    )
+  )
+```
+
+We can now then refer to this table using the label in the following way: @tbl-example.
+
+### Corporate Look
+
+We can simply add the CSS class `corporate-table` in the following way.
+
+```{python}
+#| class: corporate-table
+#| label: tbl-corporate-python
+#| tbl-cap: "Example of a corporate table in Python"
+
+#| class: corporate-table
+
+import pandas as pd
+import numpy as np
+from IPython.display import Markdown
+from tabulate import tabulate
+
+data = pd.DataFrame({"sex": ["male", "female"], "age": [15, 16]})
+Markdown(
+  tabulate(
+    data.head(),
+    headers=list(data.columns),
+    showindex=False
+    )
+  )
+```
+
+## Interactive Tables
+
+Python enables us to plot interactive html tables using [`itables`](https://github.com/mwouts/itables) package.
+
+::: {.callout-warning}
+
+- Interactive tables via `itables` package work only in `html` and `revealjs` outputs.
+- Setting up `label` in Quarto breaks the table. Do not use it.
+- `tbl-cap` doesn't work.
+
+:::
+
+```{python}
+import itables
+from itables.sample_dfs import get_countries
+
+# initialize
+itables.init_notebook_mode()
+
+itables.show(get_countries())
+```
+
+::: {.callout-tip}
+
+We can also use with `corporate-table` class.
+
+:::
