@@ -1,0 +1,8 @@
+pip-tools
+jupyter
+tabulate
+matplotlib
+seaborn
+pandas
+itables
+pyyaml

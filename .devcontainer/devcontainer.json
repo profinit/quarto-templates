@@ -24,7 +24,10 @@
 				"ms-toolsai.jupyter",
 				"quarto.quarto",
 				"ritwickdey.LiveServer"
-			]
+			],
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/local/bin/python"
+			}
 		}
 	}
 }
