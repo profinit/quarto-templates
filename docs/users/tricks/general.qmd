@@ -37,11 +37,11 @@ ln -s /path/to/original/directory /path/to/symlink
 
 ::::
 
-## Table Styles
+## Tables
 
-### Corporate
+### Style: Corporate
 
-Simply add the CSS class `corporate-table` in the following way.
+To apply the corporate styling, simply add the CSS class `corporate-table` in the following way.
 
 ```{.markdown}
 | sex      | age |
@@ -56,6 +56,211 @@ Simply add the CSS class `corporate-table` in the following way.
 | male     | 16  |
 | female   | 15  |
 : Example of a corporate table in Markdown {#tbl-corporate-md .corporate-table}
+
+::: {.callout-warning}
+
+`corporate-table` class only works in `profinit-html` and `profinit-revealjs` formats.
+
+:::
+
+## Tabsets
+
+Quarto provides you an easy way to have tabsets in your document (html/revealjs). To do so, just wrap the content into the `.panel-tabset` div class ^[Also check out [Quarto Documentation](https://quarto.org/docs/output-formats/html-basics.html#tabsets)].
+
+
+::: {.grid}
+
+:::: {.g-col-6}
+
+**Input**
+
+```{.markdown}
+::: {.panel-tabset}
+
+## Tab 1
+Content of Tab 1.
+
+## Tab 2
+Content of Tab 2.
+
+:::
+```
+
+::::
+
+
+:::: {.g-col-6}
+
+**Output**
+
+::: {.panel-tabset}
+
+#### Tab 1
+Content of Tab 1.
+
+#### Tab 2
+Content of Tab 2.
+
+::::
+
+:::
+
+:::
+
+### Styling
+
+Tabset, as of this date, supports additional styling with `.nav-pills`.
+
+::: {.grid}
+
+:::: {.g-col-6}
+
+**Input**
+
+```{.markdown}
+::: {.panel-tabset .nav-pills}
+
+## Tab 1
+Content of Tab 1.
+
+## Tab 2
+Content of Tab 2.
+
+:::
+```
+
+::::
+
+
+:::: {.g-col-6}
+
+**Output**
+
+::: {.panel-tabset .nav-pills}
+
+#### Tab 1
+Content of Tab 1.
+
+#### Tab 2
+Content of Tab 2.
+
+::::
+
+:::
+
+:::
+
+### Nesting
+
+Nesting tabset is fairly simple. We can also use `group` option to connect switching of certain tabsets. For instance, in the second example, if we switch to Option 2 with Header 1, this setting will be remember even after we switch to Option 2.
+
+::: {.callout-tip}
+
+We can specify the section using more than 3 colons. This might help with readability.
+
+:::
+
+::::: {.grid}
+
+:::: {.g-col-6}
+
+**Input**
+
+```{.markdown}
+:::: {.panel-tabset}
+
+## Header 1
+
+::: {.panel-tabset group="option"}
+
+### Option 1
+Content of Option 1 of Header 1.
+
+### Option 2
+Content of Option 2 of Header 1.
+
+:::
+
+## Header 2
+
+::: {.panel-tabset group="option"}
+
+### Option 1
+Content of Option 1 of Header 2.
+
+### Option 2
+Content of Option 2 of Header 2.
+
+:::
+
+::::
+```
+
+::::
+
+:::: {.g-col-6}
+
+:::: {.panel-tabset}
+
+## Header 1
+
+::: {.panel-tabset group="option"}
+
+### Option 1
+Content of Option 1 of Header 1.
+
+### Option 2
+Content of Option 2 of Header 1.
+
+:::
+
+## Header 2
+
+::: {.panel-tabset group="option"}
+
+### Option 1
+Content of Option 1 of Header 2.
+
+### Option 2
+Content of Option 2 of Header 2.
+
+:::
+
+::::
+
+::::
+
+:::::
+
+## Layout
+
+In HTML, we can use [CSS Grid](https://quarto.org/docs/output-formats/page-layout.html#css-grid) to alter the default layout. Using that, we can create multiple columns.
+
+Revealjs also supports something [very similar](https://quarto.org/docs/presentations/revealjs/#multiple-columns).
+
+
+## Text formatting
+
+You're probably aware of the basic Markdown formatting syntax: 
+
+* `*text*` for *text* in italic
+* `**text**` for **text** in bold
+* `~~text~~` for ~~text~~ crossed-out
+
+But there is an easy way to have arbitrary CSS class assigned to selected text (instead of using `<span>text</span>`). The syntax is pretty much simillar to how links works: `[]{.css_class}` (watch out, curly breackets!).
+
+This way, you can have:
+
+* `[text]{.underline}` for [text]{.underline} underlined text,
+* `[text]{.mark}` for [text]{.mark} for higlighted text.
+* `[text]{.p-red}` for coloring [text]{.p-red} with (Profinit) red color.
+  * Supported colors: `p-red`,`p-blue`, `p-grey`.
+
+::: {.callout-warning}
+
+Colors (like `p-red`) work only in formats `profinit-html` and `profinit-revealjs`.
+
+:::
 
 
 ## RevealJS: Too Long Slide Content

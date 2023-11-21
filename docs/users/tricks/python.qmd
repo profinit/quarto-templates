@@ -8,7 +8,9 @@ We recommend using the following development environment:
 
 - Visual Studio Code. More information can be found [here](https://quarto.org/docs/tools/vscode.html).
 
-## Rendering Tables
+## Tables
+
+### Rendering Tables
 
 Even though Jupyter enables us to view tables as pure HTML, it is generally better to convert it to Markdown before displaying it. When we convert it to Markdown, Quarto enables us to use additional features, such as referencing the table later or listing it in the list of tables etc. This, however, requires the `tabulate` package in addition to the regular pandas package.
 
@@ -35,7 +37,7 @@ Markdown(
 
 We can now then refer to this table using the label in the following way: @tbl-example.
 
-### Corporate Look
+### Styling
 
 We can simply add the CSS class `corporate-table` in the following way.
 
@@ -61,7 +63,7 @@ Markdown(
   )
 ```
 
-## Interactive Tables
+### Interactive Tables
 
 Python enables us to plot interactive html tables using [`itables`](https://github.com/mwouts/itables) package.
 
@@ -88,3 +90,35 @@ itables.show(get_countries())
 We can also use with `corporate-table` class.
 
 :::
+
+## Tabsets
+
+We can use Python to generate Tabsets dynamically. This can be useful e.g. if we want to generate a tabset for each hyper-parameter combination.
+
+To do that, we need to set up `output: asis` for the cell. Then, we can use standard `print` for generating the tabsets.
+
+```{python}
+#| output: asis
+
+#| output: asis
+
+epochs = [10, 20]
+batch_size = [16, 32, 64]
+
+print(r"::: {.panel-tabset}")
+
+for epoch in epochs:
+  print(rf"### Epochs: {epoch}")
+
+  print(r":::: {.panel-tabset .nav-pills group='batch_size'}")
+
+  for bs in batch_size:
+    print(rf"#### Batch size: {bs}")
+    print(f"Content for epochs: {epoch}, batch: {bs}")
+    print("")  # newline
+
+  print(r"::::")
+
+print(r":::")
+
+```
