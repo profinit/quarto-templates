@@ -50,17 +50,13 @@ We can simply add the CSS class `corporate-table` in the following way.
 
 import pandas as pd
 import numpy as np
-from IPython.display import Markdown
-from tabulate import tabulate
+from IPython.display import display, Markdown
 
 data = pd.DataFrame({"sex": ["male", "female"], "age": [15, 16]})
-Markdown(
-  tabulate(
-    data.head(),
-    headers=list(data.columns),
-    showindex=False
-    )
-  )
+
+display(Markdown(
+  data.to_markdown(index=False)
+))
 ```
 
 ### Interactive Tables
@@ -95,30 +91,32 @@ We can also use with `corporate-table` class.
 
 We can use Python to generate Tabsets dynamically. This can be useful e.g. if we want to generate a tabset for each hyper-parameter combination.
 
-To do that, we need to set up `output: asis` for the cell. Then, we can use standard `print` for generating the tabsets.
+To do that, we need to set up `output: asis` for the cell. Then, we can use `display` and `Markdown` for generating the tabsets.
 
 ```{python}
 #| output: asis
 
 #| output: asis
 
+from IPython.display import display, Markdown
+
 epochs = [10, 20]
 batch_size = [16, 32, 64]
 
-print(r"::: {.panel-tabset}")
+display(Markdown(r"::: {.panel-tabset}"))
 
 for epoch in epochs:
-  print(rf"### Epochs: {epoch}")
+  display(Markdown(rf"### Epochs: {epoch}"))
 
-  print(r":::: {.panel-tabset .nav-pills group='batch_size'}")
+  display(Markdown(r":::: {.panel-tabset .nav-pills group='batch_size'}"))
 
   for bs in batch_size:
-    print(rf"#### Batch size: {bs}")
-    print(f"Content for epochs: {epoch}, batch: {bs}")
-    print("")  # newline
+    display(Markdown(rf"#### Batch size: {bs}"))
+    display(Markdown(f"Content for epochs: {epoch}, batch: {bs}"))
+    display(Markdown(""))  # newline
 
-  print(r"::::")
+  display(Markdown(r"::::"))
 
-print(r":::")
+display(Markdown(r":::"))
 
 ```
