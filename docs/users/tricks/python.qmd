@@ -22,17 +22,12 @@ For example:
 
 import pandas as pd
 import numpy as np
-from IPython.display import Markdown
-from tabulate import tabulate
+from IPython.display import display, Markdown
 
 data = pd.DataFrame({"sex": ["male", "female"], "age": [15, 16]})
-Markdown(
-  tabulate(
-    data.head(),
-    headers=list(data.columns),
-    showindex=False
-    )
-  )
+display(Markdown(
+  data.head().to_markdown(index=False)
+))
 ```
 
 We can now then refer to this table using the label in the following way: @tbl-example.

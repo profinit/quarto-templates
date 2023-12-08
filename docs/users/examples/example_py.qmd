@@ -89,18 +89,11 @@ Difference between the birds
 
 import pandas as pd
 import numpy as np
-from IPython.display import Markdown
-from tabulate import tabulate
+from IPython.display import display, Markdown
 
 data = pd.read_csv("titanic.csv")
-Markdown(
-  tabulate(
-    data.head(),
-    headers=list(data.columns),
-    showindex=False
-    )
-  )
 
+display(Markdown(data.head().to_markdown(index=False)))
 ```
 
 
