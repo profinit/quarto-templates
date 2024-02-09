@@ -1,11 +1,11 @@
-FROM python:3.10.10
+FROM python:3.11.8
 
 ARG USER_ID
 ARG USER_NAME
 ARG USER_GID
 ARG USER_GNAME
 
-ARG QUARTO_VERSION=1.3.450
+ARG QUARTO_VERSION=1.4.549
 
 # Install R
 RUN apt-get update && apt-get install -y \

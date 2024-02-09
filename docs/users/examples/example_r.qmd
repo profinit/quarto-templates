@@ -46,7 +46,7 @@ print(Sys.time())
 ## Another code sample in R
 
 ```{r}
-#| label: fig-time_series
+#| label: fig-timeseries
 #| fig-cap: "Time series"
 #| warning: false
 #| echo: false
@@ -105,4 +105,4 @@ data = read.csv(file="titanic.csv")
 head(data)
 ```
 
-See @fig-time_series or @tbl-titanic.
+See @fig-timeseries or @tbl-titanic.
